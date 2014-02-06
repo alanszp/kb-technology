@@ -94,14 +94,23 @@ For **OAuth** and authentication with differente sites, you can use [OmniAuth](h
 
 ### Deploying
 
-### Development Cycle
+### Using guard & spork to speed up development cycle
 
-  * [Spork ](https://github.com/sporkrb/spork) - Test server to run test faster
-    - [Spork-rails](https://github.com/sporkrb/spork-rails#spork-rails)
-  * [Guard](https://github.com/guard/guard)
-    - [Plugin for Rspec](https://github.com/guard/guard-rspec) -  Runs `rspec` everytime your files change
-    - [Plugin for Bundle](https://github.com/guard/guard-bundler) - Runs `bundle install` everytime you `GemFile` changes
-    - [Plugin for db:migrate](https://github.com/guard/guard-migrate ) - Runs `rake db:migrate` when a new migration appears in you fs.
+[Guard](https://github.com/guard/guard) is a command line tool to easily handle events on file system modifications. With it, you can run tasks such as `rake db:migrate`, `bundle install` or tests whenever a change in your project files happens. It works with different plugins.
+
+  - Check [Guardfile examples](https://github.com/guard/guard/wiki/Guardfile-examples) to start
+  - [Railcast](http://railscasts.com/episodes/264-guard)
+
+Recommended Guards ([complete list](https://github.com/guard/guard/wiki/List-of-available-Guards)):
+  - [Guard for Rspec](https://github.com/guard/guard-rspec) -  Runs `rspec` everytime your files change
+  - [Guard for Bundle](https://github.com/guard/guard-bundler) - Runs `bundle install` everytime you `GemFile` changes
+  - [Guard for db:migrate](https://github.com/guard/guard-migrate ) - Runs `rake db:migrate` when a new migration appears in you fs.
+  - [Guard for spork](https://github.com/guard/guard-spork) - Runs spork (see below)
+
+When working with rails, launching rails every time you do a test takes a lot of time. For that cases, [Spork ](https://github.com/sporkrb/spork) was created. What it does, is create a separated process that loads your application, and everytime you want to do a test, it forks and runs. This way, it's speedup the test execution. It currently works for Rspec and Cucumber.
+
+  - See [Spork-rails](https://github.com/sporkrb/spork-rails#spork-rails)
+  - [Railscast](http://railscasts.com/episodes/285-spork)
 
 ### Debugging
 
@@ -111,7 +120,7 @@ For debugging we use [pry](http://pryrepl.org/), that is a REPL and it let's you
   - [Basic Concepts](http://vimeo.com/26391171) **MUST SEE** What's a repl and how to use it.
   - [Pry with rails (Railscast)](http://railscasts.com/episodes/280-pry-with-rails)
 * [Pry-doc](https://github.com/pry/pry-doc) Adds show-doc and show-source methods
-  - [Issue](https://github.com/banister/pry-doc/issues/3) About gem order in Gemfile. 
+  - [Issue](https://github.com/banister/pry-doc/issues/3) About gem order in Gemfile.
 
 ### Web Development
 
