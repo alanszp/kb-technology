@@ -10,21 +10,27 @@ At Zauber we adhere to Bbatsov's community driving [style guides](https://github
 
 ### Testing
 
-  * Rspec
+  * [Rspec](http://rspec.info/) TDD & BDD Style testing framework
     * [Rspec Rails](https://github.com/rspec/rspec-rails)
     * [How to write good specs](http://betterspecs.org/)
   * [Capybara](https://github.com/jnicklas/capybara) (End-to-End testing)
-    - [End-to-end testing with Capybara and Rspec] - http://goo.gl/HMqnx
-    - [Capybara (with Selenium) and Rspec] - http://goo.gl/2pUu1
-  * Cucumber (BDD)
+    - [End-to-end testing with Capybara and Rspec](http://robots.thoughtbot.com/rspec-integration-tests-with-capybara)
+    - [Capybara (with Selenium) and Rspec](http://www.opinionatedprogrammer.com/2011/02/capybara-and-selenium-with-rspec-and-rails-3/)
+  * [Cucumber](http://cukes.info/) Testing framework for BDD. You write plain text tests
     - [Cucumber Rails](https://github.com/cucumber/cucumber-rails)
-    - [Starting with Cucumber and Capybara](http://goo.gl/rfLKN)
+    - [Starting with Cucumber and Capybara](http://loudcoding.com/posts/quick-tutorial-starting-with-cucumber-and-capybara-bdd-on-rails-project/)
     - [Railcast](http://railscasts.com/episodes/155-beginning-with-cucumber)
-  * [Spork ](https://github.com/sporkrb/spork)
+  * [Spork ](https://github.com/sporkrb/spork) - Test server to run test faster
     - [Spork-rails](https://github.com/sporkrb/spork-rails#spork-rails)
-  * [Factory Girl](https://github.com/thoughtbot/factory_girl)
+  * [Factory Girl](https://github.com/thoughtbot/factory_girl) - Instead of using fixtures, create *factories* for your tests objects.
     - [Tips and Tricks](http://arjanvandergaag.nl/blog/factory_girl_tips.html)
-  * [DatabaseCleaner](https://github.com/bmabey/database_cleaner)
+  * [DatabaseCleaner](https://github.com/bmabey/database_cleaner) - When using rspec and factory girl, use this to clean your DB after/before each test.
+
+  * [Guard](https://github.com/guard/guard)
+    - [Plugin for Rspec](https://github.com/guard/guard-rspec) -  Runs `rspec` everytime your files change
+    - [Plugin for Bundle](https://github.com/guard/guard-bundler) - Runs `bundle install` everytime you `GemFile` changes
+    - [Plugin for db:migrate](https://github.com/guard/guard-migrate ) - Runs `rake db:migrate` when a new migration appears in you fs.
+
 
 ### Image Manipulation
 
@@ -43,8 +49,8 @@ At Zauber we adhere to Bbatsov's community driving [style guides](https://github
 
 ### Web
 
-  * Rack
-  * [Versionist](https://github.com/bploetz/versionist)
+  * [Rack](http://rack.github.io/) Base web interface, we don't use directly, but rails use it
+  * [Versionist](https://github.com/bploetz/versionist) - To handle API versioning
     - [Railcast](http://railscasts.com/episodes/350-rest-api-versioning)
   *
 
