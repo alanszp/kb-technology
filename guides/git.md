@@ -1,6 +1,13 @@
 Git Guide
 =========
 
+- [Setup](#setup)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Github Configuration](#github-configuration)
+  - [Zauber Git Configuration](#zauber-git-configuration)
+- [Resources](#resources)
+
 ## Setup
 
 ### Installation
