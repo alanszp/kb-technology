@@ -1,5 +1,14 @@
 # Node.js Development Resources
 
+- [Templates & Examples](#templates--examples)
+- [Recommended Modules](#recommended-modules)
+	- [Web](#web)
+	- [Testing](#testing)
+	- [Utility](#utility)
+- [Testing](#testing-1)
+- [Running](#running)
+- [Coding Style](#coding-style)
+
 ## Templates & Examples
 
 Browse [templates directory](../templates/node.js/)
