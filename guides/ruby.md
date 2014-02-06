@@ -15,6 +15,23 @@ Use [Rspec](http://rspec.info/) TDD & BDD Style testing framework.
   * To use it in rails, use: [Rspec Rails](https://github.com/rspec/rspec-rails)
   * Read: [How to write good specs](http://betterspecs.org/)
 
+To create test objects, don't use **fixtures**, instead we use [Factory Girl](https://github.com/thoughtbot/factory_girl). It let you define factories to create new test objects.
+
+  * [Tips and Tricks](http://arjanvandergaag.nl/blog/factory_girl_tips.html)
+
+If you need a database in your tests, you'll need to clean it before/after each test. Fixtures did this, but since we are using Factory Girl, the best option is to use [DatabaseCleaner](https://github.com/bmabey/database_cleaner).
+
+To do **browsers tests** use [Capybara](https://github.com/jnicklas/capybara) (End-to-End testing). Read:
+
+  * [End-to-end testing with Capybara and Rspec](http://robots.thoughtbot.com/rspec-integration-tests-with-capybara)
+  * [Capybara (with Selenium) and Rspec](http://www.opinionatedprogrammer.com/2011/02/capybara-and-selenium-with-rspec-and-rails-3/)
+
+To create **functional tests** we use [Cucumber](http://cukes.info/) which lets you define your test using simple text files.
+
+  * For rails integration [Cucumber Rails](https://github.com/cucumber/cucumber-rails)
+  * [Starting with Cucumber and Capybara](http://loudcoding.com/posts/quick-tutorial-starting-with-cucumber-and-capybara-bdd-on-rails-project/)
+  * [Railcast](http://railscasts.com/episodes/155-beginning-with-cucumber)
+
 ### Upload & Manipulate Images
 
 ### Web Authentication & Authorization
@@ -34,18 +51,13 @@ Guard, y Spork
 ### Testing
 
 
-  * [Capybara](https://github.com/jnicklas/capybara) (End-to-End testing)
-    - [End-to-end testing with Capybara and Rspec](http://robots.thoughtbot.com/rspec-integration-tests-with-capybara)
-    - [Capybara (with Selenium) and Rspec](http://www.opinionatedprogrammer.com/2011/02/capybara-and-selenium-with-rspec-and-rails-3/)
-  * [Cucumber](http://cukes.info/) Testing framework for BDD. You write plain text tests
-    - [Cucumber Rails](https://github.com/cucumber/cucumber-rails)
-    - [Starting with Cucumber and Capybara](http://loudcoding.com/posts/quick-tutorial-starting-with-cucumber-and-capybara-bdd-on-rails-project/)
-    - [Railcast](http://railscasts.com/episodes/155-beginning-with-cucumber)
+  *
+
+
   * [Spork ](https://github.com/sporkrb/spork) - Test server to run test faster
     - [Spork-rails](https://github.com/sporkrb/spork-rails#spork-rails)
-  * [Factory Girl](https://github.com/thoughtbot/factory_girl) - Instead of using fixtures, create *factories* for your tests objects.
-    - [Tips and Tricks](http://arjanvandergaag.nl/blog/factory_girl_tips.html)
-  * [DatabaseCleaner](https://github.com/bmabey/database_cleaner) - When using rspec and factory girl, use this to clean your DB after/before each test.
+
+
 
   * [Guard](https://github.com/guard/guard)
     - [Plugin for Rspec](https://github.com/guard/guard-rspec) -  Runs `rspec` everytime your files change
