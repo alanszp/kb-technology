@@ -7,11 +7,10 @@
 	- [Web Authentication & Authorization](#web-authentication-&-authorization)
 	- [Running Background Jobs](#running-background-jobs)
 	- [Deploying](#deploying)
-	- [Development Cycle](#development-cycle)
+	- [Using guard & spork to speed up development cycle](#using-guard-&-spork-to-speed-up-development-cycle)
 	- [Debugging](#debugging)
 	- [Web Development](#web-development)
 	- [Create, Develop & Test Web API (suggested)](#create-develop-&-test-web-api-suggested)
-
 
 ## Coding Style
 
@@ -92,7 +91,13 @@ For **OAuth** and authentication with differente sites, you can use [OmniAuth](h
 
 ### Running Background Jobs
 
+Resque vs. delayed_job, foreman
+
+forever (https://github.com/daddye/foreverb) [no se que es :D]
+
 ### Deploying
+
+Unicorn, nginx, capistrano, chef?
 
 ### Using guard & spork to speed up development cycle
 
@@ -130,3 +135,5 @@ For debugging we use [pry](http://pryrepl.org/), that is a REPL and it let's you
   * Rails
 
 ### Create, Develop & Test Web API (suggested)
+
+Versionist, Apiary?, que mas?
