@@ -25,6 +25,8 @@ Use [Rspec](http://rspec.info/) TDD & BDD Style testing framework.
 
 ### Development Cycle
 
+### Debugging
+
 Guard, y Spork
 
 ## Recommended Gems
