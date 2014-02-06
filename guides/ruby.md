@@ -43,7 +43,7 @@ To create **functional tests** we use [Cucumber](http://cukes.info/) which lets 
 
   * For rails integration [Cucumber Rails](https://github.com/cucumber/cucumber-rails)
   * [Starting with Cucumber and Capybara](http://loudcoding.com/posts/quick-tutorial-starting-with-cucumber-and-capybara-bdd-on-rails-project/)
-  * [Railcast](http://railscasts.com/episodes/155-beginning-with-cucumber)
+  * [Beginning with Cucubmer (Railscast)](http://railscasts.com/episodes/155-beginning-with-cucumber)
 
 ### Upload Files & Manipulate Images
 
@@ -51,14 +51,14 @@ When you need to **upload files**, the two typical options are: Paperclip and [C
 
 Some links about CarrierWave:
 
-  * [Railcast](http://railscasts.com/episodes/253-carrierwave-file-uploads)
+  * [Carrierwave File Uploads (Railscast)](http://railscasts.com/episodes/253-carrierwave-file-uploads)
   * [How to validate attachment size](https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Validate-attachment-file-size)
   * [How to validate extensions](https://github.com/carrierwaveuploader/carrierwave#securing-uploads)
 
 
 If the case, is image manipulation, typically after you upload the files. We use [Rmagick](https://github.com/rmagick/rmagick) which is a ruby interface to the popular image processing libraries ImageMagick and GraphicsMagick.
 
-  - [Railcast](http://railscasts.com/episodes/374-image-manipulation)
+  - [Image Manipulation (Railscast)](http://railscasts.com/episodes/374-image-manipulation)
   - [Instructions to install in ubuntu (Dec'12)](http://blog.evnpr.com/2012/12/install-rmagick-in-ubuntu-1204.html)
 
 There is also a third party service solution, that solves image manipulation, upload, and serving them with a CDN. That's [Cloudinary](https://github.com/cloudinary/cloudinary_gem), and it has a free tier that's ok for simple cases.
@@ -69,11 +69,26 @@ It works well with CarrierWave.
 
 ### Web Authentication & Authorization
 
-  * [Devise](https://github.com/plataformatec/devise). For Authentication
-    - [Getting Started](https://github.com/plataformatec/devise#getting-started)
-    - [Configuring Views](https://github.com/plataformatec/devise#configuring-views)
-  * [Cancan](https://github.com/ryanb/cancan) For Authorization
-    - [Devise and Cancan](http://www.tonyamoyal.com/2010/07/28/rails-authentication-with-devise-and-cancan-customizing-devise-controllers/)
+Depending on what you need, maybe **basic authentication** is ok. Check [Authentication from scratch](http://railscasts.com/episodes/250-authentication-from-scratch-revised?autoplay=true) Railscast first.
+
+When we need to add **authentication** to your web application, the typical option is to use [Devise](https://github.com/plataformatec/devise). It has several modules and can do things like Password Recovery, Tracking, Session Timeout, Account Locking, Account Confirmation, and others. It's based on [Warden](https://github.com/hassox/warden) which is a Rack Middleware for web authentication.
+
+  - [Getting Started](https://github.com/plataformatec/devise#getting-started)
+  - [Configuring Views](https://github.com/plataformatec/devise#configuring-views)
+  - [Devise (Railscast)](http://railscasts.com/episodes/209-devise-revised)
+  - [Authentication with Warden (Railscast)](http://railscasts.com/episodes/305-authentication-with-warden)
+
+For **authorization** we had used [Cancan](https://github.com/ryanb/cancan). But we didn't love it. Keep searching for a others solutions.
+
+  - [Devise and Cancan](http://www.tonyamoyal.com/2010/07/28/rails-authentication-with-devise-and-cancan-customizing-devise-controllers/)
+
+For **OAuth** and authentication with differente sites, you can use [OmniAuth](https://github.com/intridea/omniauth).
+
+  - [List of providers (sites you can use to authenticate)](https://github.com/intridea/omniauth/wiki/List-of-Strategies)
+  - [Devise & Omniauth (Railscast)](http://railscasts.com/episodes/235-devise-and-omniauth-revised)
+  - [Simple Omniauth (Railscast)](http://railscasts.com/episodes/241-simple-omniauth-revised)
+  - [Facebook Integration](http://railscasts.com/episodes/360-facebook-authentication)
+  - [Twitter Integration](http://railscasts.com/episodes/359-twitter-integration)
 
 ### Running Background Jobs
 
