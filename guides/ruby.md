@@ -105,7 +105,10 @@ For **OAuth** and authentication with differente sites, you can use [OmniAuth](h
 
 ### Debugging
 
-Pry
+* [Pry](https://github.com/rweng/pry-rails) Gem to use pry with rails
+  - [Basic Concepts](http://vimeo.com/26391171) What's a repl and how to use it.
+* [Pry-doc](https://github.com/pry/pry-doc) Adds show-doc and show-source methods
+  - [Issue](https://github.com/banister/pry-doc/issues/3) About gem order in Gemfile. 
 
 ### Web Development
 
