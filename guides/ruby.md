@@ -87,8 +87,8 @@ For **OAuth** and authentication with differente sites, you can use [OmniAuth](h
   - [List of providers (sites you can use to authenticate)](https://github.com/intridea/omniauth/wiki/List-of-Strategies)
   - [Devise & Omniauth (Railscast)](http://railscasts.com/episodes/235-devise-and-omniauth-revised)
   - [Simple Omniauth (Railscast)](http://railscasts.com/episodes/241-simple-omniauth-revised)
-  - [Facebook Integration](http://railscasts.com/episodes/360-facebook-authentication)
-  - [Twitter Integration](http://railscasts.com/episodes/359-twitter-integration)
+  - [Facebook Integration (Railscast)](http://railscasts.com/episodes/360-facebook-authentication)
+  - [Twitter Integration (Railscast)](http://railscasts.com/episodes/359-twitter-integration)
 
 ### Running Background Jobs
 
