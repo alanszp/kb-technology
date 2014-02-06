@@ -6,13 +6,32 @@ At Zauber we adhere to Bbatsov's community driving [style guides](https://github
 
 **TODO** We need a rubocop configuration file to enforce this.
 
+## Mini Guides
+
+### Testing
+
+Use [Rspec](http://rspec.info/) TDD & BDD Style testing framework.
+
+  * To use it in rails, use: [Rspec Rails](https://github.com/rspec/rspec-rails)
+  * Read: [How to write good specs](http://betterspecs.org/)
+
+### Upload & Manipulate Images
+
+### Web Authentication & Authorization
+
+### Running Background Jobs
+
+### Deploying
+
+### Development Cycle
+
+Guard, y Spork
+
 ## Recommended Gems
 
 ### Testing
 
-  * [Rspec](http://rspec.info/) TDD & BDD Style testing framework
-    * [Rspec Rails](https://github.com/rspec/rspec-rails)
-    * [How to write good specs](http://betterspecs.org/)
+
   * [Capybara](https://github.com/jnicklas/capybara) (End-to-End testing)
     - [End-to-end testing with Capybara and Rspec](http://robots.thoughtbot.com/rspec-integration-tests-with-capybara)
     - [Capybara (with Selenium) and Rspec](http://www.opinionatedprogrammer.com/2011/02/capybara-and-selenium-with-rspec-and-rails-3/)
