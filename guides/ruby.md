@@ -105,6 +105,8 @@ For **OAuth** and authentication with differente sites, you can use [OmniAuth](h
 
 ### Debugging
 
+For debuggin we use pry, that is a REPL and it let's you stop the execution and inspect the current context
+
 * [Pry](https://github.com/rweng/pry-rails) Gem to use pry with rails
   - [Basic Concepts](http://vimeo.com/26391171) What's a repl and how to use it.
 * [Pry-doc](https://github.com/pry/pry-doc) Adds show-doc and show-source methods
