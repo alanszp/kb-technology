@@ -13,10 +13,18 @@ At Zauber we adhere to Bbatsov's community driving [style guides](https://github
   * Rspec
     * [Rspec Rails](https://github.com/rspec/rspec-rails)
     * [How to write good specs](http://betterspecs.org/)
-
-
-  * Cucumber
-
+  * [Capybara](https://github.com/jnicklas/capybara) (End-to-End testing)
+    - [End-to-end testing with Capybara and Rspec] - http://goo.gl/HMqnx
+    - [Capybara (with Selenium) and Rspec] - http://goo.gl/2pUu1
+  * Cucumber (BDD)
+    - [Cucumber Rails](https://github.com/cucumber/cucumber-rails)
+    - [Starting with Cucumber and Capybara](http://goo.gl/rfLKN)
+    - [Railcast](http://railscasts.com/episodes/155-beginning-with-cucumber)
+  * [Spork ](https://github.com/sporkrb/spork)
+    - [Spork-rails](https://github.com/sporkrb/spork-rails#spork-rails)
+  * [Factory Girl](https://github.com/thoughtbot/factory_girl)
+    - [Tips and Tricks](http://arjanvandergaag.nl/blog/factory_girl_tips.html)
+  * [DatabaseCleaner](https://github.com/bmabey/database_cleaner)
 
 ### Image Manipulation
 
@@ -36,7 +44,8 @@ At Zauber we adhere to Bbatsov's community driving [style guides](https://github
 ### Web
 
   * Rack
-  * Versionist
+  * [Versionist](https://github.com/bploetz/versionist)
+    - [Railcast](http://railscasts.com/episodes/350-rest-api-versioning)
   *
 
 ### Web Frameworks
