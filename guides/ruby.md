@@ -1,5 +1,18 @@
 # Ruby Development Resources
 
+- [Coding Style](#coding-style)
+- [Mini Guides](#mini-guides)
+	- [Testing](#testing)
+	- [Upload Files & Manipulate Images](#upload-files-&-manipulate-images)
+	- [Web Authentication & Authorization](#web-authentication-&-authorization)
+	- [Running Background Jobs](#running-background-jobs)
+	- [Deploying](#deploying)
+	- [Development Cycle](#development-cycle)
+	- [Debugging](#debugging)
+	- [Web Development](#web-development)
+	- [Create, Develop & Test Web API (suggested)](#create-develop-&-test-web-api-suggested)
+
+
 ## Coding Style
 
 At Zauber we adhere to Bbatsov's community driving [style guides](https://github.com/bbatsov/ruby-style-guide)
@@ -32,9 +45,35 @@ To create **functional tests** we use [Cucumber](http://cukes.info/) which lets 
   * [Starting with Cucumber and Capybara](http://loudcoding.com/posts/quick-tutorial-starting-with-cucumber-and-capybara-bdd-on-rails-project/)
   * [Railcast](http://railscasts.com/episodes/155-beginning-with-cucumber)
 
-### Upload & Manipulate Images
+### Upload Files & Manipulate Images
+
+When you need to **upload files**, the two typical options are: Paperclip and [CarrierWave](https://github.com/carrierwaveuploader/carrierwave). We use Carrierwave, which seems to be the most complete solution. You can check [this](http://stackoverflow.com/questions/14028017/heading-into-2013-should-i-go-with-dragonfly-or-paperclip-or-carrierwave) stackoverflow question about this.
+
+Some links about CarrierWave:
+
+  * [Railcast](http://railscasts.com/episodes/253-carrierwave-file-uploads)
+  * [How to validate attachment size](https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Validate-attachment-file-size)
+  * [How to validate extensions](https://github.com/carrierwaveuploader/carrierwave#securing-uploads)
+
+
+If the case, is image manipulation, typically after you upload the files. We use [Rmagick](https://github.com/rmagick/rmagick) which is a ruby interface to the popular image processing libraries ImageMagick and GraphicsMagick.
+
+  - [Railcast](http://railscasts.com/episodes/374-image-manipulation)
+  - [Instructions to install in ubuntu (Dec'12)](http://blog.evnpr.com/2012/12/install-rmagick-in-ubuntu-1204.html)
+
+There is also a third party service solution, that solves image manipulation, upload, and serving them with a CDN. That's [Cloudinary](https://github.com/cloudinary/cloudinary_gem), and it has a free tier that's ok for simple cases.
+It works well with CarrierWave.
+
+  - [Ruby on Rails integration](http://cloudinary.com/documentation/rails_integration)
+  - [Cloudinary & Heroku](https://devcenter.heroku.com/articles/cloudinary)
 
 ### Web Authentication & Authorization
+
+  * [Devise](https://github.com/plataformatec/devise). For Authentication
+    - [Getting Started](https://github.com/plataformatec/devise#getting-started)
+    - [Configuring Views](https://github.com/plataformatec/devise#configuring-views)
+  * [Cancan](https://github.com/ryanb/cancan) For Authorization
+    - [Devise and Cancan](http://www.tonyamoyal.com/2010/07/28/rails-authentication-with-devise-and-cancan-customizing-devise-controllers/)
 
 ### Running Background Jobs
 
@@ -42,59 +81,22 @@ To create **functional tests** we use [Cucumber](http://cukes.info/) which lets 
 
 ### Development Cycle
 
-### Debugging
-
-Guard, y Spork
-
-## Recommended Gems
-
-### Testing
-
-
-  *
-
-
   * [Spork ](https://github.com/sporkrb/spork) - Test server to run test faster
     - [Spork-rails](https://github.com/sporkrb/spork-rails#spork-rails)
-
-
-
   * [Guard](https://github.com/guard/guard)
     - [Plugin for Rspec](https://github.com/guard/guard-rspec) -  Runs `rspec` everytime your files change
     - [Plugin for Bundle](https://github.com/guard/guard-bundler) - Runs `bundle install` everytime you `GemFile` changes
     - [Plugin for db:migrate](https://github.com/guard/guard-migrate ) - Runs `rake db:migrate` when a new migration appears in you fs.
 
+### Debugging
 
-### Image Manipulation
+Pry
 
-  * [Rmagick](https://github.com/rmagick/rmagick)
-    - [Railcast](http://railscasts.com/episodes/374-image-manipulation)
-    - [To install in ubuntu](http://blog.evnpr.com/2012/12/install-rmagick-in-ubuntu-1204.html)
-  * [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
-    - [Railcast](http://railscasts.com/episodes/253-carrierwave-file-uploads)
-    - [How to validate attachment size](https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Validate-attachment-file-size)
-    - [How to validate extensions](https://github.com/carrierwaveuploader/carrierwave#securing-uploads)
-
-  * [Cloudinary](https://github.com/cloudinary/cloudinary_gem)
-    - [Ruby on Rails integration](http://cloudinary.com/documentation/rails_integration)
-    - [Cloudinary & Heroku](https://devcenter.heroku.com/articles/cloudinary)
-
-
-### Web
+### Web Development
 
   * [Rack](http://rack.github.io/) Base web interface, we don't use directly, but rails use it
   * [Versionist](https://github.com/bploetz/versionist) - To handle API versioning
     - [Railcast](http://railscasts.com/episodes/350-rest-api-versioning)
-  *
-
-### Web Frameworks
-
   * Rails
 
-
-### Web Security
-  * [Devise](https://github.com/plataformatec/devise). For Authentication
-    - [Getting Started](https://github.com/plataformatec/devise#getting-started)
-    - [Configuring Views](https://github.com/plataformatec/devise#configuring-views)
-  * [Cancan](https://github.com/ryanb/cancan) For Authorization
-    - [Devise and Cancan](http://www.tonyamoyal.com/2010/07/28/rails-authentication-with-devise-and-cancan-customizing-devise-controllers/)
+### Create, Develop & Test Web API (suggested)
