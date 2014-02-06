@@ -91,9 +91,23 @@ For **OAuth** and authentication with differente sites, you can use [OmniAuth](h
 
 ### Running Background Jobs
 
-Resque vs. delayed_job, foreman
+**NEEDS WORK**
 
-forever (https://github.com/daddye/foreverb) [no se que es :D]
+There are several options to run background jobs within your rails application:
+
+  - [Sidekiq](http://mperham.github.io/sidekiq/): We haven't used, maybe worth trying it. It's tagline is *"What if 1 Sidekiq process could do the work of 20 Resque or DelayedJob processes?"*. It uses thread instead of processes.
+  - [Resque](https://github.com/resque/resque): Work with processes, using Redis as a backend
+  - [Delayed_Job](https://github.com/collectiveidea/delayed_job): Works with processes, does polling over a database table to get jobs. Now support different backends (see [here](https://github.com/collectiveidea/delayed_job/wiki/Backends)).
+
+In our experience, we prefer Resque. We ended up using Delayed_Job when we didn't want to install Redis just to have a queue. The community seems to be making the same choice (see [ruby toolbox](https://www.ruby-toolbox.com/categories/Background_Jobs)).
+
+For Resque:
+  - [Railcast](http://railscasts.com/episodes/271-resque)
+
+
+To run any of this background jobs gems, you need to run a different process. The prefered way to run those process is to use [Foreman](https://github.com/ddollar/foreman). But we don't have any experience with it yet.
+
+  - [Foreman (Railscast)](http://railscasts.com/episodes/281-foreman)
 
 ### Deploying
 
