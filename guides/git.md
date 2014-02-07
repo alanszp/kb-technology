@@ -38,6 +38,19 @@ To configure *github* follow [Generating ssh keys](https://help.github.com/artic
     chmod og-rwx ~/.netrc
     echo  machine git.zauberlabs.com login ACAVAELUSERNAME password ACAVALAPASSWORD >>  ~/.netrc
 
+## Recipes
+
+Take a look at [gitready.com](http://gitready.com/) for more recipes.
+
+### Delete a remote branch
+
+From [gitready article](http://gitready.com/beginner/2009/02/02/push-and-delete-branches.html)
+
+Just use a `:` before the branch name.
+
+    git push origin :branch-to-remove
+
+
 ## Resources
 
   * [Pro Git book](http://git-scm.com/book/): Online book. One of the best options to learn git.
