@@ -1,5 +1,5 @@
-## [Install NVM](https://github.com/creationix/nvm)
-## [Install Karma](http://karma-runner.github.io/0.8/intro/installation.html)
+- [Install NVM](https://github.com/creationix/nvm)
+- [Install Karma](http://karma-runner.github.io/0.8/intro/installation.html)
 
 ## Readings & Videos
 
