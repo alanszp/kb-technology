@@ -17,8 +17,6 @@ Browse [templates directory](../templates/node.js/)
 
 ### Creating a Command Line program
 
-**TODO** Complete me.
-
 There are two different approaches to creating a command line program: Minimalistic, Complete.
 
 For a minimalistic approach, check [yargs](https://github.com/chevex/yargs/), a fork from [optimist](https://github.com/substack/node-optimist) now unmaintained. It provides a really simple command option parser. Here's an example
@@ -74,6 +72,7 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 * **socket.io:** Websocket support. Really easy to use
 * **jade** Template Language very similar to HAML
 * **passport:** Authentication middleware. The 'Device' from node
+* **connect-ensure-login** Ensures that a user is logged in ( not for API's )
 
 ### Testing
 
@@ -85,6 +84,7 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 ### Utility
 
 * **lodash:** Utility methods for doing map, filter and a bunch of others things.
+* **async:** Utility methods for async processing, queues, jobs, etc.
 
 ## Testing
 
