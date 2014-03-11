@@ -2,8 +2,15 @@ Complete ME!
 
 ## Readings & Videos
 
+Capitulos 1 a 9 de Javascript the definitive guide.
+
 [JSTherightway](http://jstherightway.org/#patterns) ( Module pattern, singleton pattern, MV* patterns )
+
 [Function expressions vs. functions declaration](http://kangax.github.io/nfe/)
+
+[You're missing the point on promises](https://gist.github.com/domenic/3889970)
+
+[Bowling Kata with Mocha](http://vimeo.com/53048454)
 
 
 ## Excercises
