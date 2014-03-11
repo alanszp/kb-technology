@@ -67,3 +67,4 @@ Just use a `:` before the branch name.
 
   * [Pro Git book](http://git-scm.com/book/): Online book. One of the best options to learn git.
   * [gitready.com](http://gitready.com/): Git tips & tricks. "How to do X" kind of site.
+  * [Branching](http://pcottle.github.io/learnGitBranching/index.html?demo) Test your git skills.
