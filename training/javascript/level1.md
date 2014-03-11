@@ -17,7 +17,7 @@
 
 [Promises Antipatterns](http://taoofcode.net/promise-anti-patterns/?utm_source=javascriptweekly&utm_medium=email)
 
-
+[Playground](http://www.objectplayground.com/)
 
 
 ## Excercises
