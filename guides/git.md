@@ -27,6 +27,10 @@ Then configure basic settings:
 
     git config --global user.name "NOMBRE APELLIDO"
     git config --global user.email "ACAVAELUSUARIO@zauberlabs.com"
+    
+Color output
+
+    git config --global color.ui auto
 
 ### Github Configuration
 
