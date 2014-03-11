@@ -10,6 +10,8 @@ Capitulos 1 a 9 de Javascript the definitive guide.
 
 [You're missing the point on promises](https://gist.github.com/domenic/3889970)
 
+[Promises Antipatterns](http://taoofcode.net/promise-anti-patterns/?utm_source=javascriptweekly&utm_medium=email)
+
 [Bowling Kata with Mocha](http://vimeo.com/53048454)
 
 
