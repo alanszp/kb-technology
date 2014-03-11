@@ -3,7 +3,7 @@
 
 ## Readings & Videos
 
-Capitulos 1 a 9 de Javascript the definitive guide.
+[Capitulos 1 a 9 de Javascript the definitive guide](https://calibre.zauberlabs.com/calibre/browse/search?query=javascript+definitive+guide)
 
 [JSTherightway](http://jstherightway.org/#patterns) ( Module pattern, singleton pattern, MV* patterns )
 
