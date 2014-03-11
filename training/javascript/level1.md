@@ -1,4 +1,5 @@
-Complete ME!
+## [Install NVM](https://github.com/creationix/nvm)
+## [Install Karma](http://karma-runner.github.io/0.8/intro/installation.html)
 
 ## Readings & Videos
 
@@ -8,11 +9,15 @@ Capitulos 1 a 9 de Javascript the definitive guide.
 
 [Function expressions vs. functions declaration](http://kangax.github.io/nfe/)
 
+[Bowling Kata with Mocha](http://vimeo.com/53048454)
+
+[Promises won't hurt](http://nodeschool.io/#promiseitwonthurt)
+
 [You're missing the point on promises](https://gist.github.com/domenic/3889970)
 
 [Promises Antipatterns](http://taoofcode.net/promise-anti-patterns/?utm_source=javascriptweekly&utm_medium=email)
 
-[Bowling Kata with Mocha](http://vimeo.com/53048454)
+
 
 
 ## Excercises
