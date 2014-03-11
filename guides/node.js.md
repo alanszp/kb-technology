@@ -80,6 +80,7 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 * **sinon:** Mockups, Spies, Stubs
 * **should.js:** Assertion with BDD style
 * **supertest:** Helper to test APIs, fake requests
+* **instambul:** Code coverage for JS
 
 ### Utility
 
