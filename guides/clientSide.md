@@ -6,7 +6,14 @@
 
 ### Development
 
+* **angular:** Single page application framework
+
 ### Testing
 
-### Coding Style
+* **karma:** Single page application framework
+
+### Utilities
+
+* **grunt:** Task runner for javascript
+* **gulpjs:** Task runner for javascript
 
