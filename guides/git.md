@@ -39,8 +39,6 @@ Basic Aliases
     git config --global alias.ft fetch
     git config --global alias.ci commit
     git config --global alias.br branch
-    git config --global alias.l  log
-    git config --global alias.last 'log -1 HEAD'
 
 ### Github Configuration
 
