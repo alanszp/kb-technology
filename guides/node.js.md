@@ -72,11 +72,13 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
   
 #### Authentication  
 
-  We use [passport](http://passportjs.org/) as authentication middleware, OAuth, Facebook, Twitter, local with Mongo ( Can also be used with Postgresql but there's no default node module for that )
+  We use [passport](http://passportjs.org/) as authentication middleware, OAuth, OAuth 2, Google, Facebook, Twitter, local with Mongo ( Can also be used with Postgresql but there's no default node module for that )
 
 * **connect-ensure-login** Ensures that a user is logged in ( not for API's )
 
 ### Testing
+
+Mocha is a BDD testing framework
 
 * **mocha:** Testing Framework
 * **sinon:** Mockups, Spies, Stubs
