@@ -81,7 +81,7 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 //TODO upload
 
 * **cloudinary** Upload images to cloudinary.
-* **gm** A module to manipulate images with RMagick, ImageMagick, etc. ( on Heroku force to use ImageMagick see [here](http://stackoverflow.com/questions/16476666/image-resize-library-for-node-js-site-on-heroku-hosting))
+* **gm** A module to manipulate images with RMagick, ImageMagick, etc. ( on Heroku force to use ImageMagick see [here](http://stackoverflow.com/questions/16476666/image-resize-library-for-node-js-site-on-heroku-hosting) )
 
 
 ### Testing
