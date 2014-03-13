@@ -5,9 +5,9 @@
 	- [Web](#web)
 	- [Testing](#testing)
 	- [Utility](#utility)
-- [Testing](#testing-1)
 - [Running](#running)
 - [Coding Style](#coding-style)
+- [Profiling](#profiling)
 
 ## Templates & Examples
 
