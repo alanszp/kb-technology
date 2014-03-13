@@ -78,6 +78,8 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
  
 #### Upload files and Manipulate Images
 
+//TODO upload
+
 * **cloudinary** Upload images to cloudinary.
 * **gm** A module to manipulate images with RMagick, ImageMagick, etc. ( GraphicsMagick on Heroku needs to be installed )
 
