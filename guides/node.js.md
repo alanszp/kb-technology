@@ -66,12 +66,14 @@ Other things thay might be of interest:
 
 It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
 
-### Web
+### Web development
 
-* **express:** Minimalistic web framework. Sinatra Style. Number one in node.js community
-* **socket.io:** Websocket support. Really easy to use
-* **jade** Template Language very similar to HAML
-* **passport:** Authentication middleware. The 'Device' from node
+  We build applications with [Express](http://expressjs.com/), is simple, minimalistic, it has support for API's and templating, web use [Jade](http://jade-lang.com/) for templates.
+  
+#### Authentication  
+
+  We use [passport](http://passportjs.org/) as authentication middleware, OAuth, Facebook, Twitter, local with Mongo ( Can also be used with Postgresql but there's no default node module for that )
+
 * **connect-ensure-login** Ensures that a user is logged in ( not for API's )
 
 ### Testing
