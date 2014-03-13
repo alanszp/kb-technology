@@ -108,4 +108,8 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 
 ## Coding Style
 
+##Profiling
+
+* **node-heapdump** Profiler that allows to watch memory dumps on Chrome developer tools.
+
 //TODO
