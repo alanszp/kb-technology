@@ -75,6 +75,12 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
   We use [passport](http://passportjs.org/) as authentication middleware, OAuth, OAuth 2, Google, Facebook, Twitter, local with Mongo ( Can also be used with Postgresql but there's no default node module for that )
 
 * **connect-ensure-login** Ensures that a user is logged in ( not for API's )
+ 
+#### Upload files and Manipulate Images
+
+* ****
+* **gm** A module to manipulate images with RMagick, ImageMagick, etc.
+
 
 ### Testing
 
@@ -84,6 +90,7 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 * **should.js:** Assertion with BDD style.
 * **supertest:** Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
 * **instanbul:** Code coverage for JS.
+* **proxyquire** Tool for mock module dependencies.
 
 ### Utilities
 
