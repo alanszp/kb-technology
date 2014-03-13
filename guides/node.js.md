@@ -78,13 +78,12 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 
 ### Testing
 
-Mocha is a BDD testing framework
+[Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework we use it on client and server side.
 
-* **mocha:** Testing Framework
-* **sinon:** Mockups, Spies, Stubs
-* **should.js:** Assertion with BDD style
-* **supertest:** Helper to test APIs, fake requests
-* **instanbul:** Code coverage for JS
+* **sinon:** Mockups, Spies, Stubs.
+* **should.js:** Assertion with BDD style.
+* **supertest:** Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
+* **instanbul:** Code coverage for JS.
 
 ### Utility
 
