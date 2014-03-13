@@ -84,6 +84,10 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 * **gm** A module to manipulate images with RMagick, ImageMagick, etc. ( on Heroku force to use ImageMagick see [here](http://stackoverflow.com/questions/16476666/image-resize-library-for-node-js-site-on-heroku-hosting) )
 
 
+### Security
+
+  Basic security concerns https://speakerdeck.com/ckarande/top-overlooked-security-threats-to-node-dot-js-web-applications
+
 ### Testing
 
 [Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework we use it on client and server side.
