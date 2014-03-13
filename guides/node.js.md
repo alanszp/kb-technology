@@ -104,7 +104,7 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 * **async:** Utility methods for async processing, queues, jobs, etc.
 * **q:** To avoid callback hell we use promises, these are the best you can get now ;)
 * **request:** Powerful http client with support for streams.
-* **twit** Twitter API client.
+* **twit:** Twitter API client.
 
 
 ## Running
@@ -115,6 +115,6 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 
 ##Profiling
 
-* **node-heapdump** Profiler that allows to watch memory dumps on Chrome developer tools.
+* **node-heapdump:** Profiler that allows to watch memory dumps on Chrome developer tools.
 
 //TODO
