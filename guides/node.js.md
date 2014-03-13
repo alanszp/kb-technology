@@ -90,7 +90,7 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 
 ### Testing
 
-[Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework we use it on client and server side.
+[Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework.
 
 * **sinon:** Mockups, Spies, Stubs.
 * **should.js:** Assertion with BDD style.
