@@ -94,5 +94,8 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 
 ## Running
 
+* **supervisor:** Tool to reload the node server when a file is changed, we install this globally.
+
 ## Coding Style
 
+//TODO
