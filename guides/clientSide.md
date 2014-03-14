@@ -14,6 +14,8 @@ We use [AngularJS](http://angularjs.org/), kind of an MVC framework with tools l
 * **angularFire:** Integrate Angular with Firebase.
 * **restangular:** Consume REST Apis con Angular.
 
+Browse http://ngmodules.org/ for angular modules.
+
 ### Utilities
 
 * **lodash:** Utility methods for doing map, filter and a bunch of others things.
