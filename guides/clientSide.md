@@ -6,11 +6,11 @@
 
 ### Development
 
-* **angular:** Single page application framework
+We use [AngularJS](http://angularjs.org/), kind of an MVC framework with tools like components, two way data binding, dependency injection and a great community.
 
 ### Testing
 
-* **karma:** Single page application framework
+* **karma:** Simple test runner. 
 
 ### Utilities
 
