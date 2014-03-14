@@ -39,6 +39,7 @@
 * **event-strem** Built in node capability, use it where promises don't fit, ie: event processing. Good article [here](https://github.com/dominictarr/event-stream)
 * **request:** Powerful http client with support for streams.
 * **twit:** Twitter API client.  
+* **winston** Very complete logging tool with support for different transports, File, Redis, CouchDB, Mongo, profiling, logging events.
 
 
 ### Running
