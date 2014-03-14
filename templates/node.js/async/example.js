@@ -3,7 +3,7 @@
 var processor;
 
 /****************************************************************************************
-  I want to perform an operation AFTER ALL preconditions are successfully done
+  I want to perform an operation AFTER ALL preconditions are successfully done, executing one at the time
 ****************************************************************************************/
 
 processor.preconditionOperation(function(err, one) {
@@ -27,18 +27,18 @@ async.series([
   processor.preconditionOperation2,
   processor.preconditionOperation3],function(error, result){
     if (error) throw error;
-    console.log(result.one, result.two, result.three);
+    console.log(result);
   });
 
 /****************************************************************************************
-  I want to perform an operation AFTER ALL preconditions are successfully done
+  I want to perform an operation AFTER ALL preconditions are successfully done in parallel
 ****************************************************************************************/
 async.parallel([
   processor.preconditionOperation,
   processor.preconditionOperation2,
   processor.preconditionOperation3],function(error, result){
     if (error) throw error;
-    console.log(result.one, result.two, result.three);
+    console.log(result);
   });
 
 
