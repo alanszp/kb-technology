@@ -20,7 +20,7 @@ We use [AngularJS](http://angularjs.org/), kind of an MVC framework with tools l
 
 ## Testing
 
-* **karma:** Simple test runner. 
+  We use [Mocha](http://visionmedia.github.io/mocha/) for testing and [Karma](http://karma-runner.github.io/0.12/index.html) as test runner, karma loads your scripts and test scripts into the selected browser and reports the results. 
 
 
 
