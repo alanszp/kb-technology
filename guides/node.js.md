@@ -9,14 +9,6 @@
 - [Coding Style](#coding-style)
 - [Profiling](#profiling)
 
-## Templates & Examples
-
-Browse [templates directory](../templates/node.js/)
-
-### Recommended Modules
-
-It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
-
 ## Web development
 
   We build applications with [Express](http://expressjs.com/), is simple, minimalistic, it has support for API's and templating, web use [Jade](http://jade-lang.com/) for templates.
@@ -63,14 +55,21 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 
 * **supervisor:** Tool to reload the node server when a file is changed, we install this globally.
 
+## Templates & Examples
+
+Browse [templates directory](../templates/node.js/)
+
+## Recommended Modules
+
+It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
+
 ## Coding Style
+
+//TODO
 
 ##Profiling
 
 * **node-heapdump:** Profiler that allows to watch memory dumps on Chrome developer tools.
-
-//TODO
-
 
 ## Mini Guides
 
