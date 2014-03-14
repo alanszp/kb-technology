@@ -30,17 +30,7 @@
 ### Security
 
   Basic security concerns https://speakerdeck.com/ckarande/top-overlooked-security-threats-to-node-dot-js-web-applications
-
-### Testing
-
-[Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework, supports both sync and async tests easilly.
-
-* **sinon:** Mockups, Spies, Stubs.
-* **should.js:** Assertion with BDD style.
-* **supertest:** Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
-* **instanbul:** Code coverage for JS.
-* **proxyquire** Tool for mocking module dependencies.
-
+  
 ### Utilities
 
 * **lodash:** Utility methods for doing map, filter and a bunch of others things.
@@ -48,9 +38,8 @@
 * **async:** Utility methods for async processing, queues, jobs, etc, use it where promises don't fit, ie: event processing.
 * **event-strem** Built in node capability, use it where promises don't fit, ie: event processing. Good article [here](https://github.com/dominictarr/event-stream)
 * **request:** Powerful http client with support for streams.
-* **twit:** Twitter API client.
-
-
+* **twit:** Twitter API client.  
+* 
 ## Running
 
 * **supervisor:** Tool to reload the node server when a file is changed, we install this globally.
@@ -70,6 +59,19 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 ##Profiling
 
 * **node-heapdump:** Profiler that allows to watch memory dumps on Chrome developer tools.
+
+
+### Testing
+
+[Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework, supports both sync and async tests easilly.
+
+* **sinon:** Mockups, Spies, Stubs.
+* **should.js:** Assertion with BDD style.
+* **supertest:** Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
+* **instanbul:** Code coverage for JS.
+* **proxyquire** Tool for mocking module dependencies.
+
+
 
 ## Mini Guides
 
