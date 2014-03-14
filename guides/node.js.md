@@ -62,11 +62,11 @@ Other things thay might be of interest:
  * [colors](https://github.com/Marak/colors.js): To add colors to your console.log messages.
  * [node-progress](https://github.com/visionmedia/node-progress) and [node-multimeter](https://github.com/substack/node-multimeter) to implement progress bars on the console.
 
-## Recommended Modules
+### Recommended Modules
 
 It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
 
-### Web development
+## Web development
 
   We build applications with [Express](http://expressjs.com/), is simple, minimalistic, it has support for API's and templating, web use [Jade](http://jade-lang.com/) for templates.
   
