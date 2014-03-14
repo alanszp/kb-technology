@@ -96,7 +96,7 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 * **should.js:** Assertion with BDD style.
 * **supertest:** Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
 * **instanbul:** Code coverage for JS.
-* **proxyquire** Tool for mock module dependencies.
+* **proxyquire** Tool for mocking module dependencies.
 
 ### Utilities
 
