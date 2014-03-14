@@ -36,7 +36,7 @@
 * **lodash:** Utility methods for doing map, filter and a bunch of others things.
 * **q:** To avoid callback hell we use promises, these are the best you can get now ;)
 * **async:** Utility methods for async processing, queues, jobs, etc, use it where promises don't fit, ie: event processing.
-* **event-strem** Built in node capability, use it where promises don't fit, ie: event processing. Good article [here](https://github.com/dominictarr/event-stream)
+* **event-strem** Use it where promises don't fit, ie: event processing. Good article [here](https://github.com/dominictarr/event-stream)
 * **request:** Powerful http client with support for streams.
 * **twit:** Twitter API client.  
 * **winston** Very complete logging tool with support for different transports, File, Redis, CouchDB, Mongo, profiling, logging events.
