@@ -12,7 +12,7 @@ We use [AngularJS](http://angularjs.org/), kind of an MVC framework with tools l
 
 * **ui-router:** Best routing framework for AngularJS.
 * **angularFire:** Integrate Angular with Firebase.
-* **Restangular:** Consume REST Apis con Angular.
+* **restangular:** Consume REST Apis con Angular.
 
 ### Utilities
 
