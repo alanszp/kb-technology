@@ -39,29 +39,25 @@
 * **event-strem** Built in node capability, use it where promises don't fit, ie: event processing. Good article [here](https://github.com/dominictarr/event-stream)
 * **request:** Powerful http client with support for streams.
 * **twit:** Twitter API client.  
-* 
-## Running
+
+
+### Running
 
 * **supervisor:** Tool to reload the node server when a file is changed, we install this globally.
 
-## Templates & Examples
+### Templates & Examples
 
 Browse [templates directory](../templates/node.js/)
 
-## Recommended Modules
+### Recommended Modules
 
 It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
 
-## Coding Style
+### Coding Style
 
 //TODO
 
-##Profiling
-
-* **node-heapdump:** Profiler that allows to watch memory dumps on Chrome developer tools.
-
-
-### Testing
+## Testing
 
 [Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework, supports both sync and async tests easilly.
 
@@ -70,7 +66,10 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 * **supertest:** Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
 * **instanbul:** Code coverage for JS.
 * **proxyquire** Tool for mocking module dependencies.
+ 
+## Profiling
 
+* **node-heapdump:** Profiler that allows to watch memory dumps on Chrome developer tools.
 
 
 ## Mini Guides
