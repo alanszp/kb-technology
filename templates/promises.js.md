@@ -45,3 +45,25 @@
 	function isImportantLink(link) { //some criteria }
 ```
 
+### Testing Promises
+#### Useful libs
+* [Chai](https://www.npmjs.org/package/chai)
+* [Chai as Promised](https://www.npmjs.org/package/chai-as-promised)
+
+#### Testing function that returns a promise
+```javascript
+	chai = require('chai')
+	chaiAsPromised = require("chai-as-promised")
+	should = chai.should()
+	it('should find important links', function() {
+		var important_links = ['link0', 'linkN']
+		linkPromises.should.become(important_links)
+	})
+```
+If we are not using Mocha > 1.18.0, we must manually call done:
+```javascript
+	it('should find important links', function(done) {
+		var important_links = ['link0', 'linkN']
+		linkPromises.should.become(important_links).verify(done)
+	})
+```
