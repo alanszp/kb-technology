@@ -1,4 +1,4 @@
-# Promises 1
+# Promises
 We will try to evince some of the advantages of using promises:
 
   1. Function implementation can be **sync or async**, without needing to change the code that uses it.
@@ -126,4 +126,40 @@ Fetch some links from URLs and filter them.
       })
     })
 ```
-
+# Promises Chains
+## Example
+Application login.
+## Base Code
+```javascript
+  /* checkPassword has to do some cpu heavy tasks comparing the password 
+with the encrypted version, so it is async */
+  var login = function(req, res) {
+    User.findOne({ email: req.body.email }, function(user){
+      if(checkUserExists()) {     
+        checkPassword(function success() {
+          return addUserToSession()
+        }, function fail() {
+          return respondWithAuthError()
+        })
+      } else {
+        return respondWithAuthError()
+      }
+    }, function fail() {
+      return respondWithServerError()
+    })
+  }
+```
+## Cleaning code with promises chains 
+```javascript
+  var login = function(req, res) {
+    User.findOne({ email: req.body.email })
+      .fail(respondWithServerError)
+      .then(checkUserExists)
+      .then(checkPassword)
+      .then(addUserToSession)
+      .then(respondWithUser)
+      .fail(respondWithAuthError)
+      .done()
+  }
+```
+> Replacing if/else control flow with promise fulfillment/rejection tends to clean up code
