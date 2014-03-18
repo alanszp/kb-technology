@@ -3,14 +3,14 @@
 - [Coding Style](#coding-style)
 - [Mini Guides](#mini-guides)
 	- [Testing](#testing)
-	- [Upload Files & Manipulate Images](#upload-files-&-manipulate-images)
-	- [Web Authentication & Authorization](#web-authentication-&-authorization)
+	- [Upload Files & Manipulate Images](#upload-files--manipulate-images)
+	- [Web Authentication & Authorization](#upload-files--manipulate-images)
 	- [Running Background Jobs](#running-background-jobs)
 	- [Deploying](#deploying)
-	- [Using guard & spork to speed up development cycle](#using-guard-&-spork-to-speed-up-development-cycle)
+	- [Using guard & spork to speed up development cycle](#using-guard--spork-to-speed-up-development-cycle)
 	- [Debugging](#debugging)
 	- [Web Development](#web-development)
-	- [Create, Develop & Test Web API (suggested)](#create-develop-&-test-web-api-suggested)
+	- [Create, Develop & Test Web API (suggested)](#create-develop--test-web-api-suggested)
 
 ## Coding Style
 
