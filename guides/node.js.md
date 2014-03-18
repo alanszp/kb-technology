@@ -17,14 +17,14 @@
 
   We use [passport](http://passportjs.org/) as authentication middleware, OAuth, OAuth 2, Google, Facebook, Twitter, local with Mongo ( Can also be used with Postgresql but there's no default node module for that )
 
-* **connect-ensure-login** Ensures that a user is logged in ( not for API's )
+* [connect-ensure-login](https://github.com/jaredhanson/connect-ensure-login): Ensures that a user is logged in ( not for API's )
  
 #### Upload files and Manipulate Images
 
 //TODO upload
 
-* **cloudinary** Upload images to cloudinary.
-* **gm** A module to manipulate images with RMagick, ImageMagick, etc. ( on Heroku force to use ImageMagick see [here](http://stackoverflow.com/questions/16476666/image-resize-library-for-node-js-site-on-heroku-hosting) )
+* [cloudinary](https://github.com/cloudinary/cloudinary_npm): Upload images to cloudinary.
+* [gm](http://aheckmann.github.io/gm/): A module to manipulate images with RMagick, ImageMagick, etc. ( on Heroku force to use ImageMagick see [here](http://stackoverflow.com/questions/16476666/image-resize-library-for-node-js-site-on-heroku-hosting) )
 
 
 ### Security
@@ -37,14 +37,14 @@
 * [q](https://github.com/kriskowal/q): To avoid callback hell we use promises, these are the best you can get now ;)
 * [async](https://github.com/caolan/async): Utility methods for async processing, queues, jobs, etc, use it where promises don't fit, ie: event processing.
 * [event-strem](https://github.com/dominictarr/event-stream) Use it where promises don't fit, ie: event processing. Good article [here](https://github.com/dominictarr/event-stream)
-* **request:** Powerful http client with support for streams.
-* **twit:** Twitter API client.  
-* **winston** Very complete logging tool with support for different transports, File, Redis, CouchDB, Mongo, profiling, logging events.
+* [request](https://github.com/mikeal/request): Powerful http client with support for streams.
+* [twit](https://github.com/ttezel/twit): Twitter API client.  
+* [winston](https://github.com/flatiron/winston) Very complete logging tool with support for different transports, File, Redis, CouchDB, Mongo, profiling, logging events.
 
 
 ### Running
 
-* **supervisor:** Tool to reload the node server when a file is changed, we install this globally.
+* [supervisor](https://github.com/isaacs/node-supervisor): Tool to reload the node server when a file is changed, we install this globally.
 
 ### Templates & Examples
 
@@ -62,15 +62,15 @@ It's a good practice to browse *popular* modules in [nodejsmodules.org](https://
 
 [Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework, supports both sync and async tests easilly.
 
-* **sinon:** Mockups, Spies, Stubs.
-* **should.js:** Assertion with BDD style.
-* **supertest:** Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
-* **instanbul:** Code coverage for JS.
-* **proxyquire** Tool for mocking module dependencies.
+* [sinon](sinonjs.org): Mockups, Spies, Stubs.
+* [should.js](https://github.com/visionmedia/should.js/): Assertion with BDD style.
+* [supertest](https://github.com/visionmedia/supertest): Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
+* [instanbul](https://github.com/gotwarlost/istanbul): Code coverage for JS.
+* [proxyquire](https://github.com/thlorenz/proxyquire): Tool for mocking module dependencies.
  
 ## Profiling
 
-* **node-heapdump:** Profiler that allows to watch memory dumps on Chrome developer tools.
+* [node-heapdump](https://github.com/bnoordhuis/node-heapdump): Profiler that allows to watch memory dumps on Chrome developer tools.
 
 
 ## Mini Guides
