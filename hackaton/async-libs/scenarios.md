@@ -55,3 +55,43 @@ f1(function () {
   }, errorCbk);
 }, errorCbk);
 ```
+
+### Async
+
+```js
+async.series([
+  function (cbk) {
+    var r = Math.random();
+    if (r < 0.75) {
+      console.log("f1 executed successfully");
+      cbk();
+    } else {
+      cbk("f1");
+    }
+  },
+  function (cbk) {
+    var r = Math.random();
+    if (r < 0.75) {
+      console.log("f2 executed successfully");
+      cbk();
+    } else {
+      cbk("f2");
+    }
+  },
+  function (cbk) {
+    var r = Math.random();
+    if (r < 0.75) {
+      console.log("f3 executed successfully");
+      cbk();
+    } else {
+      cbk("f3");
+    }
+  }
+], function (err) {
+  if (err) {
+    console.log("Error occured in " + err);
+  } else {
+    console.log("Sequence executed successfully");  
+  }
+});
+```
