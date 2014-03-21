@@ -138,11 +138,49 @@ diff.change.details // Allocations and free's by object type
 
 ```
 
-
-
 ### Gotchas
 
 In order to make your debugging experience less painful, use constructors to create objects to see them listed in the diff.change.details by constructor name
+
+### Full example
+
+```javascript
+
+var memwatch = require("memwatch");
+var fs = require('fs');
+
+var Joel = function () {
+ this.j = fs.readFileSync('./spiderwebs.mp3').toString();
+}
+
+Joel.prototype.someAction = function() { return "some"; };
+
+var fn = function() {
+ var a = new Joel();
+ var b = "useless value";
+ var c = "Hello, World!";
+
+ function inner() {
+   return a;
+ }
+
+ return function() {
+   return c;
+ };
+};
+
+
+
+
+var leaks = [];
+setInterval(function() { 
+ var hd = new memwatch.HeapDiff();
+ leaks.push(fn()); 
+ var e = hd.end();
+ console.dir(e.change.details);
+}, 10);
+ 
+```
 
 
 ***
