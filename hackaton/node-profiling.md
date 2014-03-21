@@ -142,6 +142,7 @@ diff.change.details // Allocations and free's by object type
 
 ### Gotchas
 
+In order to make your debugging experience less painful, use constructors to create objects to see them listed in the diff.change.details by constructor name
 
 
 ***
