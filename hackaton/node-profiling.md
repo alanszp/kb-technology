@@ -184,3 +184,86 @@ setInterval(function() {
 
 
 ***
+
+## Heapdump
+
+[heapdump](https://github.com/bnoordhuis/node-heapdump)
+
+``` npm install heapdump ```
+
+### Overview
+
+Lets you take memory snapshots and analyze them using google developer tools
+
+### Might be useful for
+
+* Memory usage forensics
+
+### Snippets time!
+
+```javascript
+var heapdump = require("heapdump");
+
+/* Writes a heapdump in the given path*/
+heapdump.writeSnapshot('./' + Date.now() + '.heapsnapshot');
+
+```
+
+Once the snapshot was saved, go to chrome, open developer tools and go to profiling.
+
+Once there, hover over profiles tab, right click, load profile -> Select the file.
+
+You can load many profiles, and compare them using the compare view below the objects visualization view.
+
+
+### Gotchas
+
+Use always named constructors for objects in order to make less painful memory profiling.
+
+### Full example
+
+```javascript
+
+var heapdump = require("heapdump");
+var fs = require("fs");
+
+
+var Joel = function () {
+  this.j = fs.readFileSync('/home/j/jmeter.tar.gz').toString();
+}
+
+Joel.prototype.someAction = function() { return "some"; };
+
+
+var fn = function() {
+ var j = new Joel();
+ var b = "useless value";
+ var c = "Hello, World!";
+
+ function inner(){
+  return j;
+ }
+ return function() {
+   return c;
+ };
+};
+
+
+function generateLeak() {
+  var leaks = [];
+  setInterval(function(){
+    leaks.push(fn());
+  }, 10);
+
+}
+
+
+generateLeak();
+
+
+setInterval(function(){
+  heapdump.writeSnapshot('./' + Date.now() + '.heapsnapshot');
+  console.log("Heap generated")
+}, 1000);
+ 
+```
