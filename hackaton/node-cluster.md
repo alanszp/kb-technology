@@ -61,6 +61,15 @@ Heroku supports cluster out-of-the-box but there are considerations to take in c
 
 
 
+### Nodejitsu
+
+We could not find a single thread that assures cluster is supported.
+
+However, in their FAQ section, they really encourage to use their scaling system instead of cluster.
+
+There should be a test app and deploy in order to test the hypotesis of cluster working in nodejitsu.
+
+
 
 
 
