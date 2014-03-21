@@ -104,6 +104,10 @@ var fn = function() {
  var a = fs.readFileSync('./reallyBigFile.mkv').toString();
  var b = "useless value";
  var c = "Hello, World!";
+ 
+ function inner(){
+  return a;
+ }
 
  return function() {
    return c;
