@@ -101,7 +101,7 @@ memwatch.on('stats', function(info) {
 
 
 var fn = function() {
- var a = fs.readFileSync('./reallyBigFile.mkv');
+ var a = fs.readFileSync('./reallyBigFile.mkv').toString();
  var b = "useless value";
  var c = "Hello, World!";
 
