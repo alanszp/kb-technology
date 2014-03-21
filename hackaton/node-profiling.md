@@ -18,6 +18,8 @@ All of them are used as modules which must be required inside the app.
 
 [usage.js](https://github.com/arunoda/node-usage)
 
+``` npm install usage ```
+
 ### Overview
 
 Super simple module just to watch in a simple straight-forward way the cpu and memory consumption.
@@ -72,6 +74,8 @@ usage.clearHistory(); //clean history for all pids
 ## Memwatch
 
 [memwatch](https://github.com/lloyd/node-memwatch)
+
+``` npm install memwatch ```
 
 ### Overview
 
