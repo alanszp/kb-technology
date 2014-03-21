@@ -7,7 +7,6 @@
 ## Calling a sequence of asynchronous functions
 
 ### Callbacks
-
 ```javascript
 asncFunction1(function(err, result) {
   asncFunction2(function(err, result) {
@@ -32,6 +31,7 @@ async.series([
   asncFunction5
 ])
 ```
+
 ### [Q Promises](https://github.com/kriskowal/q)
 ```javascript
 Q.fcall(Q.nfcall(asncFunction1))
@@ -45,7 +45,7 @@ Q.fcall(Q.nfcall(asncFunction1))
 
 ## Calling a sequence of synchronous and asynchronous functions
 
-### Example
+### Callbacks
 ```javascript
 asncFunction(function(err, result) {
   sncFunction2()
@@ -72,5 +72,3 @@ var outputPromise = Q.fcall(asncFunction1)
 
 ### Async
 > Async only accepts callback-based asynchronous functions
-
-##Making a lib
