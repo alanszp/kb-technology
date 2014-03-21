@@ -71,6 +71,62 @@ There should be a test app and deploy in order to test the hypotesis of cluster 
 
 
 
+```javascript
+
+var cluster = require('cluster');
+var http = require('http');
+var numCPUs = require('os').cpus().length;
+
+console.log(numCPUs);
+
+if (cluster.isMaster) {
+  for (var i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  cluster.on('exit', function(worker, code, signal) {
+    console.log('worker ' + worker.process.pid + ' died');
+  });
+} else {
+  http.createServer(function(req, res) {
+    setTimeout(function(){
+      res.writeHead(200);
+      res.end("hello world from " + process.pid +  "\n");
+    }, 100);
+  }).listen(3000);
+}
+
+
+```
+
+package.json:
+```
+{
+  "name": "hackaton-profiling-nodejs",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "engines": {
+    "node": "0.10.x"
+  }
+}
+
+```
+
+``` jitsu deploy```
+
+This will deploy the app in nodejitsu.
+
+Apparently, nodejitsu supports cluster after the requests used as a test on this app.
+
+However it is not in the jitsu docs, so using it is not encouraged.
+
 
 
 
