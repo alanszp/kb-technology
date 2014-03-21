@@ -4,6 +4,8 @@
 
 My memory usage patterns are unacceptable (Lots of gc, lots of memory).
 
+In order to see some examples and deeper explanation, go to [this link](http://stackoverflow.com/questions/5326300/garbage-collection-with-node-js)
+
 
 ## The tools
 
@@ -64,5 +66,74 @@ usage.clearHistory(pid); //clear history for the given pid
 usage.clearHistory(); //clean history for all pids
 
 ```
+
+***
+
+## Memwatch
+
+[memwatch](https://github.com/lloyd/node-memwatch)
+
+### Overview
+
+Module that lets you sneak over gc stats and exposes a "leak" event to take actions.
+
+### Might be useful for
+
+* Triggering actions on memory leaks
+* Monitoring memory usage in platforms where monitoring is paid (combined with logging)
+
+### Snippets time!
+
+```
+var memwatch = require("memwatch");
+
+memwatch.on('leak', function(info) {
+ console.log(info);
+});
+
+memwatch.on('stats', function(info) {
+ console.log(info);
+});
+
+
+var fn = function() {
+ var a = fs.readFileSync('./reallyBigFile.mkv');
+ var b = "useless value";
+ var c = "Hello, World!";
+
+ return function() {
+   return c;
+ };
+};
+
+var leaks = [];
+
+setInterval(function(){
+  leaks.push(fn());
+}, 100);
+
+
+```
+
+You can also use a HeapDiff to research the new allocations:
+
+```
+var hd = new memwatch.HeapDiff();
+
+// do some things ...
+
+var diff = hd.end();
+
+diff.before // t0 snapshot
+diff.after // t1 snapshot
+diff.change.details // Allocations and free's by object type
+
+```
+
+
+
+### Gotchas
+
+
 
 ***
