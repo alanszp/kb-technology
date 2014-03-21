@@ -33,7 +33,7 @@ Works on Heroku and Nodejitsu.
 
 ### Snippets time!
 
-```
+```javascript
 var usage = require("usage");
 
 var pid = process.pid // you can use any valid PID instead
@@ -46,7 +46,7 @@ usage.lookup(pid, function(err, result) {
 
 The result is an object of form:
 
-```
+```javascript
 {
     cpu: 10.6, //in percentage
     memory: 100065280 //in no of bytes
@@ -58,7 +58,7 @@ The result is an object of form:
 
 If you call ``` usage.lookup() ``` continuously for a given pid, you can turn on keepHistory flag and you'll get the CPU usage since last time you track the usage. This reflects the current CPU usage.
 
-```
+```javascript
 
 var options = { keepHistory: true }
 
@@ -88,7 +88,7 @@ Module that lets you sneak over gc stats and exposes a "leak" event to take acti
 
 ### Snippets time!
 
-```
+```javascript
 var memwatch = require("memwatch");
 
 memwatch.on('leak', function(info) {
@@ -125,7 +125,7 @@ setInterval(function(){
 
 You can also use a HeapDiff to research the new allocations:
 
-```
+```javascript
 var hd = new memwatch.HeapDiff();
 
 // do some things ...
