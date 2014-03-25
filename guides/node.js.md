@@ -10,23 +10,38 @@
 	- [Using guard & spork to speed up development cycle](#using-guard--spork-to-speed-up-development-cycle)
 	- [Debugging](#debugging)
 	- [Web Development](#web-development)
-	- [Create, Develop & Test Web API (suggested)](#create-develop--test-web-api-suggested)
-	- 
-### Coding Style
+	
+
+First! It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
+
+	
+## Coding Style
 
   We follow AirBnb [coding style](https://github.com/airbnb/javascript)
+  
+## Mini Guides  
 
-## Web development
+### Testing
+
+[Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework, supports both sync and async tests easilly.
+
+* [sinon](sinonjs.org): Mockups, Spies, Stubs.
+* [should.js](https://github.com/visionmedia/should.js/): Assertion with BDD style.
+* [supertest](https://github.com/visionmedia/supertest): Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
+* [instanbul](https://github.com/gotwarlost/istanbul): Code coverage for JS.
+* [proxyquire](https://github.com/thlorenz/proxyquire): Tool for mocking module dependencies.
+
+### Development
 
   We build applications with [Express](http://expressjs.com/), is simple, minimalistic, it has support for API's and templating, web use [Jade](http://jade-lang.com/) for templates.
   
-#### Authentication  
+### Authentication  
 
   We use [passport](http://passportjs.org/) as authentication middleware, OAuth, OAuth 2, Google, Facebook, Twitter, local with Mongo ( Can also be used with Postgresql but there's no default node module for that )
 
 * [connect-ensure-login](https://github.com/jaredhanson/connect-ensure-login): Ensures that a user is logged in ( not for API's )
- 
-#### Upload files and Manipulate Images
+
+### Upload files and Manipulate Images
 
 //TODO upload
 
@@ -57,23 +72,7 @@
 
 Browse [templates directory](../templates/node.js/)
 
-### Recommended Modules
 
-It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
-
-
-//TODO
-
-## Testing
-
-[Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework, supports both sync and async tests easilly.
-
-* [sinon](sinonjs.org): Mockups, Spies, Stubs.
-* [should.js](https://github.com/visionmedia/should.js/): Assertion with BDD style.
-* [supertest](https://github.com/visionmedia/supertest): Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
-* [instanbul](https://github.com/gotwarlost/istanbul): Code coverage for JS.
-* [proxyquire](https://github.com/thlorenz/proxyquire): Tool for mocking module dependencies.
- 
 ## Profiling
 
 * [node-heapdump](https://github.com/bnoordhuis/node-heapdump): Profiler that allows to watch memory dumps on Chrome developer tools.
