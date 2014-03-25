@@ -1,13 +1,20 @@
 # Node.js Development Resources
 
-- [Templates & Examples](#templates--examples)
-- [Recommended Modules](#recommended-modules)
-	- [Web](#web)
-	- [Testing](#testing)
-	- [Utility](#utility)
-- [Running](#running)
 - [Coding Style](#coding-style)
-- [Profiling](#profiling)
+- [Mini Guides](#mini-guides)
+	- [Testing](#testing)
+	- [Upload Files & Manipulate Images](#upload-files--manipulate-images)
+	- [Web Authentication & Authorization](#upload-files--manipulate-images)
+	- [Running Background Jobs](#running-background-jobs)
+	- [Deploying](#deploying)
+	- [Using guard & spork to speed up development cycle](#using-guard--spork-to-speed-up-development-cycle)
+	- [Debugging](#debugging)
+	- [Web Development](#web-development)
+	- [Create, Develop & Test Web API (suggested)](#create-develop--test-web-api-suggested)
+	- 
+### Coding Style
+
+  We follow AirBnb [coding style](https://github.com/airbnb/javascript)
 
 ## Web development
 
@@ -54,7 +61,6 @@ Browse [templates directory](../templates/node.js/)
 
 It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
 
-### Coding Style
 
 //TODO
 
