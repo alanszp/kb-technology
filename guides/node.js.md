@@ -2,10 +2,11 @@
 
 - [Coding Style](#coding-style)
 - [Mini Guides](#mini-guides)
+        - [Coding Style](#coding-style)
         - [Development](#development)
 	- [Testing](#testing)
 	- [Authentication](#authentication)
-	- [Upload Files & Manipulate Images](#upload-files--manipulate-images)
+	- [Upload Files & Manipulate Images](#upload-files-and-manipulate-images)
 	- [Security](#security)
 	- [Running](#running)
 	- [Profiling](#profiling)
