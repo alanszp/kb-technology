@@ -16,7 +16,7 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
 	
 ## Coding Style
 
-  We use a Sublime linter plugin with a [.jshintrc](../templates/node.js/.jshintrc) file, you can check the ECMA 5 features available in node [here](https://github.com/joyent/node/wiki/ECMA-5-Mozilla-Features-Implemented-in-V8)
+  We use a Sublime linter plugin with a [.jshintrc](../templates/node.js/.jshintrc) file also you can check the ECMA 5 features available in node [here](https://github.com/joyent/node/wiki/ECMA-5-Mozilla-Features-Implemented-in-V8)
   
 ## Mini Guides  
 
