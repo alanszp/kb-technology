@@ -78,4 +78,4 @@ Browse [templates directory](../templates/node.js/)
 The use of closures can lead to memory leaks so we may need to profile our application to find them.
 Some memory usage patterns are unacceptable (Lots of gc, lots of memory).
 
-In order to see some examples and deeper explanation, go to [this link](http://stackoverflow.com/questions/5326300/garbage-collection-with-node-js)
+In order to see some examples and deeper explanation, go to [this link](http://stackoverflow.com/questions/5326300/garbage-collection-with-node-js), finally
