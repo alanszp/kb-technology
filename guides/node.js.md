@@ -2,9 +2,9 @@
 
 - [Coding Style](#coding-style)
 - [Mini Guides](#mini-guides)
+        - [Development](#development)
 	- [Testing](#testing)
-	- [Web Authentication & Authorization](#upload-files--manipulate-images)
-	- [Running Background Jobs](#running-background-jobs)
+	- [Authentication](#authentication)
 	- [Upload Files & Manipulate Images](#upload-files--manipulate-images)
 	- [Security](#security)
 	- [Running](#running)
@@ -20,6 +20,10 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
   
 ## Mini Guides  
 
+### Development
+
+  We build applications with [Express](http://expressjs.com/), is simple, minimalistic, it has support for API's and templating, web use [Jade](http://jade-lang.com/) for templates.
+
 ### Testing
 
 [Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework, supports both sync and async tests easilly.
@@ -30,10 +34,6 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
 * [instanbul](https://github.com/gotwarlost/istanbul): Code coverage for JS.
 * [proxyquire](https://github.com/thlorenz/proxyquire): Tool for mocking module dependencies.
 
-### Development
-
-  We build applications with [Express](http://expressjs.com/), is simple, minimalistic, it has support for API's and templating, web use [Jade](http://jade-lang.com/) for templates.
-  
 ### Authentication  
 
   We use [passport](http://passportjs.org/) as authentication middleware, OAuth, OAuth 2, Google, Facebook, Twitter, local with Mongo ( Can also be used with Postgresql but there's no default node module for that )
