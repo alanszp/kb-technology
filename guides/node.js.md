@@ -2,7 +2,6 @@
 
 - [Coding Style](#coding-style)
 - [Mini Guides](#mini-guides)
-   
         - [Development](#development)
 	- [Testing](#testing)
 	- [Authentication](#authentication)
