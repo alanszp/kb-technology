@@ -1,12 +1,5 @@
 # Memory Profiling
 
-## The problem
-
-My memory usage patterns are unacceptable (Lots of gc, lots of memory).
-
-In order to see some examples and deeper explanation, go to [this link](http://stackoverflow.com/questions/5326300/garbage-collection-with-node-js)
-
-
 ## The tools
 
 There are a few tools used to profile node applications. Just to say some: nodetime, look, node-heapdump, usage, memwatch, etc.
