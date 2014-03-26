@@ -52,16 +52,6 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
 
   Basic security concerns https://speakerdeck.com/ckarande/top-overlooked-security-threats-to-node-dot-js-web-applications
   
-### Utilities
-
-* [lodash](http://lodash.com/): Utility methods for doing map, filter and a bunch of others things.
-* [q](https://github.com/kriskowal/q): To avoid callback hell we use promises, these are the best you can get now ;)
-* [async](https://github.com/caolan/async): Utility methods for async processing, queues, jobs, etc, use it where promises don't fit, ie: event processing.
-* [event-strem](https://github.com/dominictarr/event-stream) Use it where promises don't fit, ie: event processing. Good article [here](https://github.com/dominictarr/event-stream)
-* [request](https://github.com/mikeal/request): Powerful http client with support for streams.
-* [twit](https://github.com/ttezel/twit): Twitter API client.  
-* [winston](https://github.com/flatiron/winston) Very complete logging tool with support for different transports, File, Redis, CouchDB, Mongo, profiling, logging events.
-
 
 ### Running
 
@@ -74,3 +64,15 @@ The use of closures can lead to memory leaks so we may need to profile our appli
 Some memory usage patterns are unacceptable (Lots of gc, lots of memory).
 
 In order to see some examples and deeper explanation, go to [this link](http://stackoverflow.com/questions/5326300/garbage-collection-with-node-js), finally check [this tools](./node-profiling.md) to get the job done ;)
+
+//FIND A BETTER WAY TO SHOW THIS UTILITIES
+
+### Utilities
+
+* [lodash](http://lodash.com/): Utility methods for doing map, filter and a bunch of others things.
+* [q](https://github.com/kriskowal/q): To avoid callback hell we use promises, these are the best you can get now ;)
+* [async](https://github.com/caolan/async): Utility methods for async processing, queues, jobs, etc, use it where promises don't fit, ie: event processing.
+* [event-strem](https://github.com/dominictarr/event-stream) Use it where promises don't fit, ie: event processing. Good article [here](https://github.com/dominictarr/event-stream)
+* [request](https://github.com/mikeal/request): Powerful http client with support for streams.
+* [twit](https://github.com/ttezel/twit): Twitter API client.  
+* [winston](https://github.com/flatiron/winston) Very complete logging tool with support for different transports, File, Redis, CouchDB, Mongo, profiling, logging events.
