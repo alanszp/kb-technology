@@ -2,13 +2,13 @@
 
 - [Coding Style](#coding-style)
 - [Mini Guides](#mini-guides)
-        - [Development](#development)
-	- [Testing](#testing)
-	- [Authentication](#authentication)
-	- [Upload Files & Manipulate Images](#upload-files-and-manipulate-images)
-	- [Security](#security)
-	- [Running](#running)
-	- [Profiling](#profiling)
+    - [Development](#development)
+    - [Testing](#testing)
+    - [Authentication](#authentication)
+    - [Upload Files & Manipulate Images](#upload-files-and-manipulate-images)
+    - [Security](#security)
+    - [Running](#running)
+    - [Profiling](#profiling)
 	
 
 First! It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
