@@ -3,13 +3,12 @@
 - [Coding Style](#coding-style)
 - [Mini Guides](#mini-guides)
 	- [Testing](#testing)
-	- [Upload Files & Manipulate Images](#upload-files--manipulate-images)
 	- [Web Authentication & Authorization](#upload-files--manipulate-images)
 	- [Running Background Jobs](#running-background-jobs)
-	- [Deploying](#deploying)
-	- [Using guard & spork to speed up development cycle](#using-guard--spork-to-speed-up-development-cycle)
-	- [Debugging](#debugging)
-	- [Web Development](#web-development)
+	- [Upload Files & Manipulate Images](#upload-files--manipulate-images)
+	- [Security](#security)
+	- [Running](#running)
+	- [Profiling](#profiling)
 	
 
 First! It's a good practice to browse *popular* modules in [nodejsmodules.org](https://nodejsmodules.org/).
@@ -68,12 +67,8 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
 
 * [supervisor](https://github.com/isaacs/node-supervisor): Tool to reload the node server when a file is changed, we install this globally.
 
-### Templates & Examples
 
-Browse [templates directory](../templates/node.js/)
-
-
-## Profiling
+### Profiling
 
 The use of closures can lead to memory leaks so we may need to profile our application to find them.
 Some memory usage patterns are unacceptable (Lots of gc, lots of memory).
