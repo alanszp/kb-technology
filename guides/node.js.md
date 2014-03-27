@@ -29,12 +29,6 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
 
 [Mocha](http://visionmedia.github.io/mocha/) is a BDD testing framework, supports both sync and async tests easilly.
 
-* [sinon](sinonjs.org): Mockups, Spies, Stubs.
-* [should.js](https://github.com/visionmedia/should.js/): Assertion with BDD style.
-* [supertest](https://github.com/visionmedia/supertest): Helper to test APIs, fake requests, it loads the app to allow send request to it and make assertions.
-* [instanbul](https://github.com/gotwarlost/istanbul): Code coverage for JS.
-* [proxyquire](https://github.com/thlorenz/proxyquire): Tool for mocking module dependencies.
-
 #### API Testing with Supertest:
 
 Examples suppose: MongoDb + Mongoose + Passport
@@ -149,7 +143,13 @@ The request should respond with an array containing all the users. But in order 
 	  });
 	})
 	
-That's all!
+
+Want more tools?
+
+* [sinon](sinonjs.org): Mockups, Spies, Stubs.
+* [should.js](https://github.com/visionmedia/should.js/): Assertion with BDD style.
+* [instanbul](https://github.com/gotwarlost/istanbul): Code coverage for JS.
+* [proxyquire](https://github.com/thlorenz/proxyquire): Tool for mocking module dependencies.
 
 ### Authentication  
 
