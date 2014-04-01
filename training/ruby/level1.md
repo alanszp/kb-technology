@@ -30,7 +30,7 @@
 
 
 ## Exercises
-#####All excercises must be resolved following the TDD approach using Rspec
+**All excercises must be resolved following the TDD approach using Rspec**
 
 - [Introduction kata](https://github.com/zauberlabs/kb-technology/blob/master/training/ruby/exercises/introduction-kata.md)
 
