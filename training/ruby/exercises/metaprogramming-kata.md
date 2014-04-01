@@ -23,7 +23,7 @@ Foo.instance == Foo.instance #should be true
 
 ## Optional requirements: 
   * remove, hide or rename the new method. 
-  * implement trivial - nont thread safe - lazy loading
+  * implement trivial - non thread safe - lazy loading
   * allow to parameterize the get_instance selector
 
 # Decorator / Interceptor
