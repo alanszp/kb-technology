@@ -12,7 +12,7 @@ Estos son algunos ejercicios de Ruby. Los temas que tratan son
  * Numeros Romanos: Modelado
  * Variables, Variables, Variables: Que imprime esto?
  * Guía de teléfonos REST: Sinatra, DataMapper
- * DSL Equipos de Fútbol: Todo
+ * DSL Equipos de Fútbol
  * OpenStruct: MethodMissing 
  * Distribuidores de Cerveza: MethodMissing, Send, Regexp
  * URLEncoded: OpenClasses
