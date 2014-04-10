@@ -8,11 +8,19 @@ The async steps are the following:
 - Download the author's avatar of each tweet.
 - Upload each tweet with the avatar to Amazon S3.
 
-### RxJS
+## RxJS
+
+- **Repo:** [https://github.com/Reactive-Extensions/RxJS](https://github.com/Reactive-Extensions/RxJS)
+- **Documentation of methods used in the example:** [Observable Docs](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/observable.md#observable-object)
+
+### Source Code
 
 ```js
 var Rx = require('rx');
 
+/**
+tweetSource: simulates a source of tweets, with a 1% of error probability.
+**/
 var tweetSource = Rx.Observable.create(function (observer) {
   for (var i = 0; i < 100; i++) {
     setTimeout(function (tweetNumber) {
@@ -26,6 +34,9 @@ var tweetSource = Rx.Observable.create(function (observer) {
   }
 });
 
+/**
+tweetWithAvatarSource: simulates the avatar download for each tweet, with a 1% of error probabilty.
+**/
 var tweetWithAvatarSource = tweetSource.flatMap(function newTweetReceived(tweet) {
   return Rx.Observable.create(function (observer) {
     setTimeout(function (tweet) {
@@ -39,6 +50,9 @@ var tweetWithAvatarSource = tweetSource.flatMap(function newTweetReceived(tweet)
   });
 });
 
+/**
+uploadSource: simulates the tweet upload, with 1% of error probability.
+**/
 var uploadSource = tweetWithAvatarSource.flatMap(function tweetWithAvatar(tweetWithAvatar) {
   return Rx.Observable.create(function (observer) {
     setTimeout(function (tweetWithAvatar) {

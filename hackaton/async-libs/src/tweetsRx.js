@@ -1,5 +1,8 @@
 var Rx = require('rx');
 
+/**
+tweetSource: simulates a source of tweets, with a 1% of error probability.
+**/
 var tweetSource = Rx.Observable.create(function (observer) {
   for (var i = 0; i < 100; i++) {
     setTimeout(function (tweetNumber) {
@@ -13,6 +16,9 @@ var tweetSource = Rx.Observable.create(function (observer) {
   }
 });
 
+/**
+tweetWithAvatarSource: simulates the avatar download for each tweet, with a 1% of error probabilty.
+**/
 var tweetWithAvatarSource = tweetSource.flatMap(function newTweetReceived(tweet) {
   return Rx.Observable.create(function (observer) {
     setTimeout(function (tweet) {
@@ -26,6 +32,9 @@ var tweetWithAvatarSource = tweetSource.flatMap(function newTweetReceived(tweet)
   });
 });
 
+/**
+uploadSource: simulates the tweet upload, with 1% of error probability.
+**/
 var uploadSource = tweetWithAvatarSource.flatMap(function tweetWithAvatar(tweetWithAvatar) {
   return Rx.Observable.create(function (observer) {
     setTimeout(function (tweetWithAvatar) {
