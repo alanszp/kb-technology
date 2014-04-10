@@ -1,16 +1,3 @@
-# Async Tweets Example
-
-The idea of this example is to perform a task conformed by 3 dependent async steps.
-
-The async steps are the following:
-
-- Fetch tweets.
-- Download the author's avatar of each tweet.
-- Upload each tweet with the avatar to Amazon S3.
-
-### RxJS
-
-```js
 var Rx = require('rx');
 
 var tweetSource = Rx.Observable.create(function (observer) {
@@ -60,4 +47,3 @@ uploadSource.subscribe(
     console.log(error);
   }
 );
-```
