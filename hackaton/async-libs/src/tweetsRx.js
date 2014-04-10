@@ -10,7 +10,7 @@ var tweetSource = Rx.Observable.create(function (observer) {
       if (r < 0.99) {
         observer.onNext("Tweet " + (tweetNumber + 1));
       } else {
-        observer.onError("Tweet fetching error");
+        observer.onError(new Error("Tweet fetching error"));
       }
     }, Math.random() * 5000, i);
   }
@@ -26,7 +26,7 @@ var tweetWithAvatarSource = tweetSource.flatMap(function newTweetReceived(tweet)
       if (r < 0.99) {
         observer.onNext(tweet + " + Avatar");
       } else { 
-        observer.onError("Avatar fetching error");
+        observer.onError(new Error("Avatar fetching error"));
       }
     }, Math.random() * 5000, tweet);
   });
@@ -42,7 +42,7 @@ var uploadSource = tweetWithAvatarSource.flatMap(function tweetWithAvatar(tweetW
       if (r < 0.99) {
         observer.onNext(tweetWithAvatar + " + uploaded");
       } else {
-        observer.onError("Uploading error");
+        observer.onError(new Error("Uploading error"));
       }
     }, Math.random() * 5000, tweetWithAvatar);
   });

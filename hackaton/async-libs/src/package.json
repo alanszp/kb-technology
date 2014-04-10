@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "winston": "^0.7.3",
-    "rx": "^2.2.19"
+    "rx": "^2.2.19",
+    "q": "^1.0.1"
   }
 }
