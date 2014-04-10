@@ -75,3 +75,7 @@ uploadSource.subscribe(
   }
 );
 ```
+
+### Some comments
+
+- The `onError` callback is for the full stream. So if it is called, the stream is considered completed, and is not going to send more events. Therefore, in the example, if there is an error, it will stop all the procedure. So, if we want to handle the error of a tweet in any of the steps, we have to do it manually in each step without calling the `onError` callback.
