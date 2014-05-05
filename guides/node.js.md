@@ -3,6 +3,7 @@
 - [Coding Style](#coding-style)
 - [Mini Guides](#mini-guides)
     - [Development](#development)
+    	- [Express 4 changes](#express-4-changes)
     - [Testing](#testing)
     	- [API Testing with Supertest](#api-testing-with-supertest)
     - [Authentication](#authentication)
@@ -24,6 +25,13 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
 ### Development
 
   We build applications with [Express](http://expressjs.com/), is simple, minimalistic, it has support for API's and templating, web use [Jade](http://jade-lang.com/) for templates.
+  
+#### Express 4 Changes
+
+Express 4 will come with new features and improvements. You can see them [here](http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0) and [here](https://github.com/visionmedia/express/wiki/Migrating-from-3.x-to-4.x#changed) for more detailed information.
+
+The biggest addition/improvement to Express 4 is the new `Router` API. [This](https://github.com/visionmedia/express/wiki/New-features-in-4.x#router) is a good short example of how to use it, and [here](http://expressjs.com/4x/api.html#router) you can see the full documentation if needed.
+
 
 ### Testing
 
