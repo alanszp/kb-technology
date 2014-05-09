@@ -168,7 +168,6 @@ with the encrypted version, so it is async */
 ```javascript
   var login = function(req, res) {
     User.findOne({ email: req.body.email })
-      .fail(respondWithServerError)
       .then(checkUserExists)
       .then(checkPassword)
       .then(addUserToSession)
