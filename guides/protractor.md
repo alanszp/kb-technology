@@ -27,7 +27,7 @@ Besides, you **can't watch the test results on your terminal**, only on the brow
 
 - You **configure all the browsers*** you want your tests to be runned. The test runner will open all of them and perfom the tests.
 - You can **define files/directories to include or exclude**.
-- You can configure **autowatch** and see your tests run on every code change.
+- You can configure **autowatch** (only in the case of karma) and see your tests run on every code change.
 
 This are the main advantages of using a test runner. Besides they provide some features that can be replaced using task runners (ie: Grunt, Gulp). They come as plugins, for example:
 
@@ -46,6 +46,22 @@ This are the main advantages of using a test runner. Besides they provide some f
 - It gives you the ability to **run js scripts on the browser**
 - It's API is **built upon promises**, so testing the asynchronous is simple.
 
+### How does a Protrator spec flow looks like?
+
+Protractor makes calls through the WebDriver API (wrapped inside the browser variable), that hit the selenium server, which controls the browser under test and make the magic happen
+
+### How do Protractor automatically handles the asynchronic nature of browser interactions on tests?
+
+**All WebDriver API calls** (and thus, protractor calls) **return promises** instead of actual values.
+
+An important point to understand is that although **protractor can be configured to be used with mocha**, by default it uses a **modified version of jasmine**. It modifies jasmine's `expect` method to perform assertions only after WebDriver promises have fullfilled, so the developer doesn't have to worry about calling `done()`. Thats why if you take some sample spec from the web defined using default modified jasmine and you **change to mocha**, you will have to **handle asynchronicity yourself** (ie: by using chai-as-promised).
+
+### Recommendations when using Protractor
+
+- Use the <a href="https://github.com/angular/protractor/blob/master/docs/getting-started.md#organizing-real-tests-page-objects" target="_blank">Page Objects</a> pattern
+- Use default jasmine implementation, or <a href="https://github.com/angular/protractor/blob/master/docs/using-mocha.md" target="_blank"> mocha with chai-as-promised</a>
+
 
 Recommended articles:
   - <a href="http://www.ng-newsletter.com/posts/practical-protractor.html" target="_blank">NG-NEWSLETTER Practical Protractor</a>.
+  - <a href="https://github.com/angular/protractor/blob/master/docs/getting-started.md" target="_blank">Official Protractor Getting Started Guide</a>.
