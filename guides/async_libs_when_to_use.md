@@ -2,7 +2,8 @@
 
 ## Callbacks
 
-When the flow is very basic, like only one nested async call.
+- When the flow is very basic, like only one nested async call.
+- When there is no time to learn any complex control flow.
 
 ## Async.js
 
@@ -15,7 +16,7 @@ When you want to manage a handfull of async calls on a clean way:
 but you don't need any of the following:
   - Call both **sync and async** functions chained.
   - **Register multiple callbacks** to the same function.
-  - **Pass the chain** (of async functions) arround between functions.
+  - ~~**Pass the chain** (of async functions) arround between functions.~~ (you can use async.compose to compose a function and pass it arround. This function will receive a callback)
 
 Why not **just use promises** for this situations?
 
@@ -73,3 +74,9 @@ apply on our *stream*. So, we can add only the modules that we need separately.
 One of the main cons of this async model, is that in some cases it is hard to model a problem as a
 stream with a chain of transformations. And maybe, we can solve the same problem with promises in an easier
 way, coding a bit more functionality.
+
+## Streams
+
+When promises are not enough:
+
+  - Incremental procesing of chunks of data (ie: read a file, send data from server to the client) 
