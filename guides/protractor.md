@@ -32,4 +32,20 @@ Besides, you **can't watch the test results on your terminal**, only on the brow
 This are the main advantages of using a test runner. Besides they provide some features that can be replaced using task runners (ie: Grunt, Gulp). They come as plugins, for example:
 
   - compile coffescript on code change
-  - preload $templateCache
+  - preload $templateCache 
+
+### Why should we use Protractor instead of karma (for E2E tests)?
+
+`Karma` official docs <a href="https://karma-runner.github.io/0.10/intro/faq.html" target="_blank">recommends using `protractor` instead of `karma-ng-scenario`</a>.
+
+- Protractor provides some **commands to easily install selenium and chromedriver**
+- Protractor is built on **Selenium's WebDriver**, which is a standardized API to interact with browsers
+- Protractor is built on top of the **jasmine framework**
+- Protractor **needs a Selenium server*** up and running (**unless** we only want to run our tests against chrome using **ChromeDriver**)
+- Protractor automatically adds a `browser` variable that is a **wrapper for the WebDriver API**. The browser variables comes with some **handy methods**, like `browser.debugger()`, which will pause the test execution on a given point to allow inspections on the actual browser's console
+- It gives you the ability to **run js scripts on the browser**
+- It's API is **built upon promises**, so testing the asynchronous is simple.
+
+
+Recommended articles:
+  - <a href="http://www.ng-newsletter.com/posts/practical-protractor.html" target="_blank">NG-NEWSLETTER Practical Protractor</a>.
