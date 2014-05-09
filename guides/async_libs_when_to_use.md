@@ -60,3 +60,16 @@ fs.readFileAsync("myfile.json")
 ## Promises
 
 Basically, when you want to manage sync and async functions on a chain.
+
+## Reactive
+It is very useful when you can model your problem as a *stream* of data,
+where each value has to be transformed synchronously or asynchronously, and the
+input of one transformation depends on the output of another one.
+
+[RxJS](https://github.com/Reactive-Extensions/RxJS) was used to test this async model. One of the library's
+pros is that it is well modularised, and each module comes with a battery of transformations that we can
+apply on our *stream*. So, we can add only the modules that we need separately.
+
+One of the main cons of this async model, is that in some cases it is hard to model a problem as a
+stream with a chain of transformations. And maybe, we can solve the same problem with promises in an easier
+way, coding a bit more functionality.
