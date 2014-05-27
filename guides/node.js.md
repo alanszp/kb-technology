@@ -180,7 +180,7 @@ Want more tools?
 
 ### Running
 
-* [supervisor](https://github.com/isaacs/node-supervisor): Tool to reload the node server when a file is changed, we install this globally.
+* [nodemon](https://github.com/remy/nodemon): Tool to reload the node server when a file is changed, we install this globally.
 
 
 ### Profiling
