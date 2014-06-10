@@ -66,7 +66,7 @@
   should = chai.should()
   it('should find important links', function() {
     var important_links = ['link0', 'linkN']
-    linkPromises.should.become(important_links)
+    return linkPromises.should.become(important_links)
   })
 ```
 If we are not using Mocha > 1.18.0, we must manually call done:
