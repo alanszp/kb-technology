@@ -24,7 +24,7 @@
 
 ## Excercises
 
-- All excercises must be resolved following the TDD approach using mocha and karma.
+- All excercises must be resolved following the TDD approach using mocha for node.
 
 ### Kata Bowling
  
