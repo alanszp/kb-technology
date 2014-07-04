@@ -221,7 +221,20 @@ getUrl()
   .catch(EmptyUrlError, InvalidUrlError, handleErrors)
 ```
 
+or maybe catch anything:
+```javascript
+getUrl()
+  .then(doSomethingWithUrl())
+  .catch(handleErrors)
+```
+
 More about `.catch` go [here](https://github.com/petkaantonov/bluebird/blob/master/API.md#catchfunction-errorclassfunction-predicate-function-handler---promise)
+
+
+## Important reading regarding error handling in general:
+
+If you have a context where you need to handle different type of errors, and to override the default behaviour, please read [this](https://github.com/petkaantonov/bluebird#error-handling) entire section, because it's important to know how it handle the error flow. 
+
 
 ## Performance
 
@@ -258,22 +271,21 @@ in Bluebird:
     .then(doSomething)
 ```
 
-Promisifying the entirely object: `var fs = Promise.promisify(require("fs"))` and every method will return a promise.
+Promisifying the entire object: `var fs = Promise.promisifyAll(require("fs"))` and every method will return a promise.
 
-More info about promisification [here](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisification)
-
-## Lot of awesome shorthands!
-
-Brief quotes about useful shorthand methods:
-
-`.map` / `.filter`
+NOTE: Some libraries that are promisified, generate new methods with the suffix 'Async'. For example, using mongoose:
 
 ```javascript
-Promise.all([UrlPromise1, UrlPromise2, UrlPromise3])
-  .map(function(url, index) {
-    return { index: index, url: url }
-  })
-```
-> Returns an array of objects like {index:1, url: "someUrl"}
+var mongoose = require('mongoose');
+var Promise = require('bluebird');
+var Schema = mongoose.Schema;
 
-check more functions applied to collections [here](https://github.com/petkaantonov/bluebird/blob/master/API.md#collections)
+var UserSchema = new Schema({name: String});
+
+module.exports = Promise.promisifyAll(mongoose.model('User', UserSchema));
+```
+
+To use any promisified method, for example, `create`, we need to do it like this: 
+`user.createAsync({name: 'Matias'}).then(...).catch(...)`
+
+More info about promisification [here](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisification)
