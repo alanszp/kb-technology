@@ -10,6 +10,7 @@ server
   services
   helpers
   workers      // sirve separar los workers?
+  .jshintrc
 
 test
   routes
@@ -18,10 +19,11 @@ test
   services
   helpers
   workers
+  .jshintrc
   
 package.json  
 gulpfile.js
-.jshintrc
+
 
 
 Tareas
