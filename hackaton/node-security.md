@@ -24,7 +24,7 @@ Cross-site request forgery is a type of malicious exploit of a website whereby u
 
 If you are developing Single Page Applications, [this](http://www.mircozeiss.com/using-csrf-with-express-and-angular/) guide could be useful to handle this security concern.
 
-#### How can we protect our node server?
+### How can we protect our node server from these security concerns?
 
 For web applications that are not SPA, there is an specific module available in **npm**, developed by the paypal team as part of the open source framework **kraken.js**, called **lusca**. This module enable by default various security configurations, including **csrf** and **xss**, within others. 
 
