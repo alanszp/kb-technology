@@ -26,13 +26,14 @@ gulpfile.js
 
 
 
-Tareas
+Tareas obligatorias
  - test
  - deploy
+   - linter
    - bump
    - tag
 
+
 Otros
- - travis ( si se puede )
- - linter
+ - travis ( solo se aceptan no tenerlo en ciertas situaciones excepcionales )
  ```
