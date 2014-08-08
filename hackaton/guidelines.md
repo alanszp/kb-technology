@@ -1,3 +1,4 @@
+```
 Basic NODE API structure
 
 config         // configuration de la aplicacion ( usamos config module por eso en el root)
@@ -32,3 +33,4 @@ Tareas
 Otros
  - travis ( si se puede )
  - linter
+ ```
