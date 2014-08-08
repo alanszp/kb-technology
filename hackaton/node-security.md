@@ -23,3 +23,10 @@ The most dangerous CSRF vulnerability ranks as the 909th most dangerous software
 An attacker may forge a request to log the victim into a target website using the attacker's credentials; this is known as login CSRF. Login CSRF makes various novel attacks possible; for instance, an attacker can later log into the site with his legitimate credentials and view private information like activity history that has been saved in the account. The attack has been demonstrated against YouTube.
 
 **Note:** [Using CSRF protection with Express and AngularJS](http://www.mircozeiss.com/using-csrf-with-express-and-angular/)
+
+#### How can we protect our node server?
+
+For web applications that are not SPA, there is an specific module available in **npm**, developed by the paypal team as part of the open source framework **kraken.js**, called **lusca**. This module enable by default various security configurations, including **csrf** and **xss**, within others. 
+
+This module is used as a middlewere for express applications. It's quite easy, you can read more [here](https://github.com/krakenjs/lusca)
+
