@@ -1,6 +1,6 @@
 {
     "node"          : true,     // Nodejs
-    "es5"           : true,     // Ecma 5 enabled
+    "es5"           : false,     // Ecma 5 enabled
     "esnext"        : false,    // Ecma 6 disabled
     "bitwise"       : true,     // Prohibit bitwise operators (&, |, ^, etc.).
     "curly"         : true,     // Require {} for every new block or scope.
