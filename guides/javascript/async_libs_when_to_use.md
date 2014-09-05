@@ -1,4 +1,4 @@
-#When to use each control flow technique
+# When to use each control flow technique
 
 ## Callbacks
 
@@ -79,4 +79,4 @@ way, coding a bit more functionality.
 
 When promises are not enough:
 
-  - Incremental procesing of chunks of data (ie: read a file, send data from server to the client) 
+  - Incremental procesing of chunks of data (ie: read a file, send data from server to the client)
