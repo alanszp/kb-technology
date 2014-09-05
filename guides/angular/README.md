@@ -22,9 +22,9 @@ Browse http://ngmodules.org/ for angular modules.
 
 ## Testing
 
-  We use [Mocha](http://visionmedia.github.io/mocha/) for testing and [Karma](http://karma-runner.github.io/0.12/index.html) as test runner, karma loads your scripts and test scripts into the selected browser and reports the results. 
-  
-  We're using protractor for integration test, check out our guide [here](https://github.com/zauberlabs/kb-technology/blob/master/guides/protractor.md)
+  We use [Mocha](http://visionmedia.github.io/mocha/) for testing and [Karma](http://karma-runner.github.io/0.12/index.html) as test runner, karma loads your scripts and test scripts into the selected browser and reports the results.
+
+  We're using protractor for integration test, check out our guide [here](https://github.com/zauberlabs/kb-technology/blob/master/guides/angular/protractor.md)
 
 
 
