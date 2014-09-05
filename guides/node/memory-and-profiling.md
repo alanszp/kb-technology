@@ -1,6 +1,14 @@
-# Memory Profiling
+# Memory Management & Profiling
 
-## The tools
+The use of closures can lead to memory leaks so we may need to profile our application to find them.
+Some memory usage patterns are unacceptable (Lots of gc, lots of memory).
+
+In order to see some examples and deeper explanation, go to [this link](http://stackoverflow.com/questions/5326300/garbage-collection-with-node-js).
+
+
+## Memory Profiling
+
+### The tools
 
 There are a few tools used to profile node applications. Just to say some: nodetime, look, node-heapdump, usage, memwatch, etc.
 
@@ -8,13 +16,13 @@ All of them are used as modules which must be required inside the app.
 
 ***
 
-## Usage.js
+### Usage.js
 
 [usage.js](https://github.com/arunoda/node-usage)
 
 ``` npm install usage ```
 
-### Overview
+#### Overview
 
 Super simple module just to watch in a simple straight-forward way the cpu and memory consumption.
 
@@ -25,7 +33,7 @@ Works on Heroku and Nodejitsu.
 * Triggering actions on cpu or memory thresholds (Scaling, notifying, etc)
 * Monitoring cpu and memory usage in platforms where monitoring is paid
 
-### Snippets time!
+#### Snippets time!
 
 ```javascript
 var usage = require("usage");
@@ -48,7 +56,7 @@ The result is an object of form:
 
 ```
 
-### Gotchas
+#### Gotchas
 
 If you call ``` usage.lookup() ``` continuously for a given pid, you can turn on keepHistory flag and you'll get the CPU usage since last time you track the usage. This reflects the current CPU usage.
 
@@ -65,7 +73,7 @@ usage.clearHistory(); //clean history for all pids
 
 ***
 
-## Memwatch
+### Memwatch
 
 [memwatch](https://github.com/lloyd/node-memwatch)
 
@@ -98,7 +106,7 @@ var fn = function() {
  var a = fs.readFileSync('./reallyBigFile.mkv').toString();
  var b = "useless value";
  var c = "Hello, World!";
- 
+
  function inner(){
   return a;
  }
@@ -167,19 +175,19 @@ var fn = function() {
 
 
 var leaks = [];
-setInterval(function() { 
+setInterval(function() {
  var hd = new memwatch.HeapDiff();
- leaks.push(fn()); 
+ leaks.push(fn());
  var e = hd.end();
  console.dir(e.change.details);
 }, 10);
- 
+
 ```
 
 
 ***
 
-## Heapdump
+### Heapdump
 
 [heapdump](https://github.com/bnoordhuis/node-heapdump)
 
@@ -210,11 +218,11 @@ Once there, hover over profiles tab, right click, load profile -> Select the fil
 You can load many profiles, and compare them using the compare view below the objects visualization view.
 
 
-### Gotchas
+#### Gotchas
 
 Use always named constructors for objects in order to make less painful memory profiling.
 
-### Full example
+#### Full example
 
 ```javascript
 
@@ -259,5 +267,5 @@ setInterval(function(){
   heapdump.writeSnapshot('./' + Date.now() + '.heapsnapshot');
   console.log("Heap generated")
 }, 1000);
- 
+
 ```
