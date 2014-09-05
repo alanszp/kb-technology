@@ -72,29 +72,39 @@ to use DI in our test with mocked objects.
 
 ````
 
-Using mocks
+Using mocks, testing a controller
 
 ````javascript
 
   /*jshint expr: true*/
   describe('feature', function() {
-      var someService = null;
+      var someService, scope = null;
 
       beforeEach(module('yourapp'));
       beforeEach(module('mocks')); //load the mocks
       beforeEach(module('htmls')); //loads the templates into the cache.
 
       //angular allows us to inject services with _service_ and use cool variables names in our tests.
-      beforeEach(inject(function(_someService_, _$helpers_ /*load our helper service*/) {
+      beforeEach(inject(function(_someService_, $helpers) {
         someService = _someService_;
-        $helpers.mockApiCall('/api/user', {user: 'someUser'}); //mock API
+        $helpers.mockApiCall('/api/user', {user: 'someUser'}); //use our helper to mock API
+
+        scope = $helpers.newScope();
+
+        $helpers.newController('SomeController', {
+          $scope: scope, //add created scoped to our controller,
+          someService: someService
+        });
+
       }));
 
 
-      describe('some scenario', function() {
+      describe('someAction()', function() {
 
-        it('should something', function(done) {
-          done(); //async test
+        it('should do something', function(done) {
+          someService.init();
+          scope.someAction();
+          scope.someProperty.should.equal('SomeValue');
         });
 
       });
