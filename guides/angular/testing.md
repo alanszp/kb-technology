@@ -5,7 +5,7 @@ We can use karma from the console or as a gulp task, this configuration example 
 
   - npm install -g karma (install karma as global program)
   - Shared configuration between global and gulp [karma.common.js](./karma-files/karma.common.js)
-  - Conf file for karma from console ( use karma.common.js ): [karma.conf.js](./karma-files/karma.conf.js)
+  - Conf file for karma from console ( uses karma.common.js ): [karma.conf.js](./karma-files/karma.conf.js)
   - Gulpfile [gulpfile.js](./karma-files/gulpfile.js)
 
 Now we can run karma start to do TDD and we can use gulp karma to run our client test once for our Travis builds.
@@ -27,9 +27,38 @@ because angular does not allow to make Ajax request in our unit tests.
     },
 ````
 
-stripPrefix would allow us to avoid problems where we reference our templates like this "/templates/some.html" in our directives, but we load them
+**stripPrefix** would allow us to avoid problems where we reference our templates like this "/templates/some.html" in our directives, but we load them
 in our karma file like this "client/templates/some.html".
-moduleName is the name angular will use to load this module in our tests.
+
+**moduleName** is the name angular will use to load this module in our tests.
+
+````javascript
+
+/*jshint expr: true*/
+describe('formatter', function() {
+    var someService = null;
+
+    beforeEach(module('yourapp'));
+    beforeEach(module('htmls'));
+
+    //angular allows us to inject services with _service_ and use cool variables names in our tests.
+    beforeEach(inject(function(_someService_) {
+      someService = _someService_;
+    }));
+
+
+    describe('scenario()', function() {
+
+      it('should something', function(done) {
+        done(); //async test
+      });
+
+    });
+
+});
+
+
+````
 
 
 
