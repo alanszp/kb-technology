@@ -1,30 +1,34 @@
-# Client side Development Resources
+# AngularJS Development Resources
 
-- [Development](#development)
-- [Testing](#testing)
 - [Coding Style](#coding-style)
+- [Popular Modules](#popular-modules)
+- Guides
+  - [Testing in AngularJS](./testing.md)
 
-## Development
+***
 
-We use [AngularJS](http://angularjs.org/), kind of an MVC framework with tools like components, two way data binding, dependency injection and a great community, [Bower](https://github.com/bower/bower) to handle dependencies and [Gulp](http://gulpjs.com/) for building tasks like compiling less, minifying assets, etc.
+## Coding Style
 
-### Angular modules
+  We use a [Sublime linter plugin](https://github.com/SublimeLinter/SublimeLinter-jshint) with a [.jshintrc](../templates/node.js/.jshintrc)
 
-* **ui-router:** Best routing framework for AngularJS.
-* **angularFire:** Integrate Angular with Firebase.
-* **restangular:** Consume REST Apis con Angular.
+***
 
-Browse http://ngmodules.org/ for angular modules.
+## Popular Modules
 
-### Utilities
-
-* **lodash:** Utility methods for doing map, filter and a bunch of others things.
-
-## Testing
-
-  We use [Mocha](http://visionmedia.github.io/mocha/) for testing and [Karma](http://karma-runner.github.io/0.12/index.html) as test runner, karma loads your scripts and test scripts into the selected browser and reports the results.
-
-  We're using protractor for integration test, check out our guide [here](https://github.com/zauberlabs/kb-technology/blob/master/guides/angular/protractor.md)
+First! It's a good practice to browse *popular* modules in [ngmodules.org](http://ngmodules.org/).
 
 
+### General
 
+  * [lodash](http://lodash.com/): Utility methods for doing map,
+    filter and a bunch of others things.
+  * [moment.js](http://momentjs.com/): Parse, validate, manipulate, and display dates in
+    javascript.
+  * [ui-router](https://github.com/angular-ui/ui-router) Routing framework
+  * [boostrap](http://angular-ui.github.io/bootstrap/) Bootstrap components as directives, these module does not depende on Bootstrap's javascript, it only uses the html and css.
+  Compatible with Bootstrap 3.
+
+### Async & Promises
+
+  * [bluebird](https://github.com/petkaantonov/bluebird): To avoid callback hell we use
+    promises, these are the best you can get now ;) (previously it was

@@ -1,3 +1,5 @@
+##Mocha and Karma
+
 ##Protractor
 
 Just think of it as a karma runner (`karma`) for end-to-end (E2E) tests.
@@ -32,7 +34,7 @@ Besides, you **can't watch the test results on your terminal**, only on the brow
 This are the main advantages of using a test runner. Besides they provide some features that can be replaced using task runners (ie: Grunt, Gulp). They come as plugins, for example:
 
   - compile coffescript on code change
-  - preload $templateCache 
+  - preload $templateCache
 
 ### Why should we use Protractor instead of karma (for E2E tests)?
 
