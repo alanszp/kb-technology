@@ -1,5 +1,38 @@
 ##Mocha and Karma
 
+
+We can use karma from the console or as a gulp task, this configuration example supports both.
+
+  - npm install -g karma (install karma as global program)
+  - Shared configuration between global and gulp [karma.common.js](./karma-files/karma.common.js)
+  - Conf file for karma from console ( use karma.common.js ): [karma.conf.js](./karma-files/karma.conf.js)
+  - Gulpfile [gulpfile.js](./karma-files/gulpfile.js)
+
+Now we can run karma start to do TDD and we can use gulp karma to run our client test once for our Travis builds.
+
+
+### ng-html2js
+
+This preprocessor will load the html templates ( directives, views, ng-includes, etc) into the $templateCache angular service
+because angular does not allow to make Ajax request in our unit tests.
+
+````
+    preprocessors: {
+     '/templates/**/*.html': ['ng-html2js'],
+    },
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'client',
+      moduleName: 'htmls'
+    },
+````
+
+stripPrefix would allow us to avoid problems where we reference our templates like this "/templates/some.html" in our directives, but we load them
+in our karma file like this "client/templates/some.html".
+moduleName is the name angular will use to load this module in our tests.
+
+
+
 ##Protractor
 
 Just think of it as a karma runner (`karma`) for end-to-end (E2E) tests.
