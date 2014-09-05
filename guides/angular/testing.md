@@ -32,30 +32,74 @@ in our karma file like this "client/templates/some.html".
 
 **moduleName** is the name angular will use to load this module in our tests.
 
+
+Since Angular won't allow us make any ajax request, all requests must be mocked, here is an example for a mock helper, Angular will load our app
+and then our "mocks" module, if any service, directive, controller is defined again is our "mocks" module it will be used, since the last definition wins this allow us
+to use DI in our test with mocked objects.
+
 ````javascript
 
-/*jshint expr: true*/
-describe('formatter', function() {
-    var someService = null;
 
-    beforeEach(module('yourapp'));
-    beforeEach(module('htmls'));
+  var mocks = angular.module('mocks', []);
 
-    //angular allows us to inject services with _service_ and use cool variables names in our tests.
-    beforeEach(inject(function(_someService_) {
-      someService = _someService_;
-    }));
+  mocks.service('$helpers', function($rootScope, $compile, $controller, $httpBackend) {
+
+    this.newScope = function() {
+      return $rootScope.$new();
+    };
+
+    this.newDirective = function(template) {
+      var element = $compile(template)($rootScope);
+      return element;
+    };
+
+    this.newController = function(controllerName, dependencies) {
+      return $controller(controllerName, dependencies);
+    };
+
+    this.digest = function() {
+      $rootScope.$digest();
+    };
+
+    // someEndPoint -> a string representing the url, example '/api/someEndPoint'
+    this.mockApiCall = function(someEndPoint, someData) {
+      $httpBackend.whenGET(someEndPoint).respond(someData);
+    };
 
 
-    describe('scenario()', function() {
+  });
 
-      it('should something', function(done) {
-        done(); //async test
+
+````
+
+Using mocks
+
+````javascript
+
+  /*jshint expr: true*/
+  describe('feature', function() {
+      var someService = null;
+
+      beforeEach(module('yourapp'));
+      beforeEach(module('mocks')); //load the mocks
+      beforeEach(module('htmls')); //loads the templates into the cache.
+
+      //angular allows us to inject services with _service_ and use cool variables names in our tests.
+      beforeEach(inject(function(_someService_, _$helpers_ /*load our helper service*/) {
+        someService = _someService_;
+        $helpers.mockApiCall('/api/user', {user: 'someUser'}); //mock API
+      }));
+
+
+      describe('some scenario', function() {
+
+        it('should something', function(done) {
+          done(); //async test
+        });
+
       });
 
-    });
-
-});
+  });
 
 
 ````
