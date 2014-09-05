@@ -26,6 +26,10 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
 
   * [lodash](http://lodash.com/): Utility methods for doing map,
     filter and a bunch of others things.
+  * [moment.js](http://momentjs.com/): Parse, validate, manipulate, and display dates in
+    javascript.
+  * [string.js](http://stringjs.com/): Utility methods for strings (example:
+    `startsWith()`, `trim()`, `wrapHTML()`)
   * [request](https://github.com/mikeal/request): Powerful http client with support for
     streams.
   * [winston](https://github.com/flatiron/winston) Very complete logging tool
@@ -34,18 +38,19 @@ First! It's a good practice to browse *popular* modules in [nodejsmodules.org](h
 
 ### Async & Promises
 
-* [q](https://github.com/kriskowal/q): To avoid callback hell we use promises, these
-  are the best you can get now ;)
-* [async](https://github.com/caolan/async): Utility methods for async processing, queues,
-  jobs, etc, use it where promises don't fit, ie: event processing.
+  * [bluebird](https://github.com/petkaantonov/bluebird): To avoid callback hell we use
+    promises, these are the best you can get now ;) (previously it was
+    [q](https://github.com/kriskowal/q)).
+  * [async](https://github.com/caolan/async): Utility methods for async processing, queues,
+    jobs, etc. Sometimes it better than use promises.
 
 
 ### Node Streams
 
-* [event-strem](https://github.com/dominictarr/event-stream) Use it where promises don't
-  fit, ie: event processing. Good article
-  [here](https://github.com/dominictarr/event-stream)
+  * [event-strem](https://github.com/dominictarr/event-stream) Use it where promises don't
+    fit, ie: event processing. Good article
+    [here](https://github.com/dominictarr/event-stream)
 
 ### API Clients
 
-* [twit](https://github.com/ttezel/twit): Twitter API client.  
+  * [twit](https://github.com/ttezel/twit): Twitter API client.  
