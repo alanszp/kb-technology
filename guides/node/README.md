@@ -5,7 +5,7 @@
 - Guides
   - [Testing in node.js](./testing.md)
   - [Web Development](./web_development.md)
-  - [Command line programs](./comand_line_programs.md)
+  - [Command line programs](./command_line_programs.md)
   - [Memory Management & Profiling](./memory-and-profiling.md)
 
 
